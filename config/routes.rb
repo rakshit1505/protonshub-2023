@@ -1,4 +1,31 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'home#index'
+
+  get '/agritech', to: 'home#agritech'
+  get '/award_and_association', to: 'home#award_and_association'
+  get '/blog', to: 'home#blog'
+  get '/careers', to: 'home#careers'
+  get '/case_studies', to: 'home#case_studies'
+  get '/contact_us', to: 'home#contact_us'
+  get '/dedicated_developers', to: 'home#dedicated_developers'
+  get '/edtech', to: 'home#edtech'
+  get '/entertainment', to: 'home#entertainment'
+  get '/events', to: 'home#events'
+  get '/fintech', to: 'home#fintech'
+  get '/food', to: 'home#food'
+  get '/gallery', to: 'home#gallery'
+  get '/healthcare', to: 'home#healthcare'
+  get '/logistics_and_travel', to: 'home#logistics_and_travel'
+  get '/mobile_app_development', to: 'home#mobile_app_development'
+  get '/mvp_development', to: 'home#mvp_development'
+  get '/portfolio', to: 'home#portfolio'
+  get '/press_release', to: 'home#press_release'
+  get '/product_management', to: 'home#product_management'
+  get '/ui_ux_development', to: 'home#ui_ux_development'
+  get '/videos', to: 'home#videos'
+  get '/web_development', to: 'home#web_development'
+  get '/webainrs_podcast', to: 'home#webainrs_podcast'
+  get '/who_we_are', to: 'home#who_we_are'
+  
 end
