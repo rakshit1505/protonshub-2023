@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col-xl-3 col-6">
           <div class="ph-logo">
-            <a href="index.html">
-              <img src="assets/logo-protonshub.svg" alt="logo">
-            </a>
+            <%= link_to image_tag('logo-protonshub.svg'), root_path %>
           </div>
         </div>
         <div class="col-xl-9 col-6">
@@ -23,7 +21,7 @@
                       <%= link_to "Careers", careers_path %>
                     </li>
                     <li>
-                      <a href="javascript:;">Award & Assciations</a>
+                      <%= link_to "Award & Assciations", award_and_association_path %>
                     </li>
                   </ul>
                 </li>
@@ -44,7 +42,7 @@
                       <%= link_to "UI/UX Development", ui_ux_development_path %>
                     </li>
                     <li>
-                      <%= link_to "Product Management", product_management_path %>
+                      <%= link_to "Product Development", product_development_path %>
                     </li>
                     <li>
                       <%= link_to "Dedicated Developers", dedicated_developers_path %>
@@ -55,7 +53,7 @@
                   <a href="javascript:;">Industry</a>
                   <ul class="ph-submenu">
                     <li>
-                      <a href="healthcare-industry.html">Healthcare</a>
+                      <%= link_to "Healthcare", healthcare_path %>
                       <!-- <ul class="ph-submenu">
                         <li class="ph-has-more-menu">
                           <a href="javascript:;">Native</a>
@@ -148,8 +146,7 @@
                   <%= link_to "Contact Us", contact_us_path %>
                 </li>
                 <li class="ph-header-btn">
-                  <a data-bs-toggle="modal" href="#ph-hire-developer" class="ph-btn">Hire
-                  Developers</a>
+                  <a data-bs-toggle="modal" href="#ph-hire-developer" class="ph-btn">Hire Developers</a>
                 </li>
               </ul>
             </div>

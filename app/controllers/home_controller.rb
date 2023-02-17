@@ -15,7 +15,7 @@ class HomeController < ApplicationController
 
   def ui_ux_development; end
 
-  def product_management; end
+  def product_development; end
 
   def dedicated_developers; end
 
@@ -35,9 +35,15 @@ class HomeController < ApplicationController
 
   def blog; end
 
+  def blog_detail; end
+
   def case_studies; end
 
+  def case_study_details; end
+
   def portfolio; end
+
+  def portfolio_detail; end
 
   def webainrs_podcast; end
 
@@ -47,7 +53,29 @@ class HomeController < ApplicationController
 
   def press_release; end
 
+  def press_release_detail; end
+
   def gallery; end
 
   def contact_us; end
+
+  def terms_policy; end
+
+  def sitemap; end
+
+  def mean_stack; end
+
+  def mern_stack; end
+
+  def react_js; end
+
+  def react_native; end
+
+  def node_js; end
+
+  def python; end
+
+  def ror; end
+
+  
 end
