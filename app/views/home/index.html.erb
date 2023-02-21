@@ -29,9 +29,7 @@
           <div class="col-md-5 col-sm-12">
             <div class="ph-video-box">
               <div class="ph-video-inner">
-                <video width="100%" controls="controls" autoplay="autoplay" loop="loop"
-                muted="muted" class="ph-video-play" alt="video protonshub"
-                src="assets/Protonshub-Technologies-video.mp4"></video>
+                <%= video_tag "Protonshub-Technologies-video.mp4", autoplay: 'autoplay' , controls: 'controls', width: '100%', loop: 'loop', muted: 'muted', class: 'ph-video-play' %>
               </div>
               <div class="ph-video-content">
                 <p>Our culture of uplifting our people with <span>Care</span>, <span>Comfort</span>
@@ -55,7 +53,7 @@
       <div class="row align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="ph-about-img">
-            <img src="assets/about-us-img.webp" class="img-responsive">
+            <%= image_tag "about-us-img.webp", class: 'img-responsive' %>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -80,11 +78,21 @@
             <div class="ph-awardHome-slide">
               <div class="swiper ph-mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/topdeveloper.svg"></div>
-                  <div class="swiper-slide"><img src="assets/appfutura.svg"></div>
-                  <div class="swiper-slide"><img src="assets/iso.svg"></div>
-                  <div class="swiper-slide"><img src="assets/clutch.svg"></div>
-                  <div class="swiper-slide"><img src="assets/glassdoor.svg"></div>
+                  <div class="swiper-slide">
+                    <%= image_tag "topdeveloper.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "appfutura.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "iso.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "clutch.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "glassdoor.svg" %>
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,7 +106,7 @@
   <!--Our Services sec start-->
   <section class="ph-our-service ph-spacer-top">
     <div class="ph-shap-elements">
-      <img src="assets/arrow-abstract.svg" class="ph-shap-upDown">
+      <%= image_tag "arrow-abstract.svg", class: 'ph-shap-upDown' %>
     </div>
     <div class="container">
       <div class="row">
@@ -129,7 +137,7 @@
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/mobile-dev.svg">
+                      <%= image_tag 'mobile-dev.svg' %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>Mobile App Development</h2>
@@ -153,7 +161,7 @@
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/web-development.svg">
+                      <%= image_tag 'web-development.svg' %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>Web Development</h2>
@@ -174,7 +182,7 @@
                 <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/uiux.svg">
+                      <%= image_tag "uiux.svg" %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>UI/UX Design</h2>
@@ -195,7 +203,7 @@
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/mvp.svg">
+                      <%= image_tag "mvp.svg" %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>MVP Development</h2>
@@ -217,7 +225,7 @@
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/mobile-dev.svg">
+                      <%= image_tag "mobile-dev.svg" %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>Enterprise Solution</h2>
@@ -235,7 +243,7 @@
                 <div class="tab-pane fade" id="dedicated-developers" role="tabpanel" aria-labelledby="dedicated-developers-tab" tabindex="0">
                   <div class="ph-image-content">
                     <div class="ph-ourService-icon">
-                      <img src="assets/mobile-dev.svg">
+                      <%= image_tag "mobile-dev.svg" %>
                     </div>
                     <div class="ph-our-service-content">
                       <h2>Dedicated Developers</h2>
@@ -368,7 +376,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="ph-process-img d-flex justify-content-end">
-            <img src="assets/process.png">
+            <%= image_tag "process.png" %>
           </div>
         </div>
       </div>
@@ -428,25 +436,31 @@
               <div class="ph-Technologies-list">
                 <ul>
                   <li>
-                    <img src="assets/adobe-xd.svg">
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li class="landscape"><img src="assets/ps.svg">
+                  <li class="landscape">
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -456,25 +470,32 @@
             <div class="tab-pane fade" id="Design2-tab-pane" role="tabpanel" aria-labelledby="Design2-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -484,25 +505,32 @@
             <div class="tab-pane fade" id="Design3-tab-pane" role="tabpanel" aria-labelledby="Design3-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -512,25 +540,32 @@
             <div class="tab-pane fade" id="Design4-tab-pane" role="tabpanel" aria-labelledby="Design4-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -539,25 +574,32 @@
             <div class="tab-pane fade" id="Design5-tab-pane" role="tabpanel" aria-labelledby="Design5-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -566,25 +608,32 @@
             <div class="tab-pane fade" id="Design6-tab-pane" role="tabpanel" aria-labelledby="Design6-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -594,25 +643,32 @@
             <div class="tab-pane fade" id="Design7-tab-pane" role="tabpanel" aria-labelledby="Design7-tab" tabindex="0">
               <div class="ph-Technologies-list">
                 <ul>
-                  <li><img src="assets/adobe-xd.svg">
+                  <li>
+                    <%= image_tag "adobe-xd.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/figma.svg">
+                  <li>
+                    <%= image_tag "figma.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/sketch.svg">
+                  <li>
+                    <%= image_tag "sketch.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/illustrator.svg">
+                  <li>
+                    <%= image_tag "illustrator.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
-                  <li><img src="assets/ps.svg">
+                  <li>
+                    <%= image_tag "ps.svg" %>
                     <h6>Web Develop</h6>
                   </li>
                 </ul>
@@ -689,18 +745,32 @@
             <div class="ph-ourClient-logo">
               <div class="swiper ph-mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/colgate.svg"></div>
-                  <div class="swiper-slide"><img src="assets/g2-org.svg"></div>
-                  <div class="swiper-slide"><img src="assets/henkel-org.svg"></div>
-                  <div class="swiper-slide"><img src="assets/stage.svg"></div>
-                  <div class="swiper-slide"><img src="assets/mahindra-org.svg"></div>
-                  <div class="swiper-slide"><img src="assets/manyvaar.svg"></div>
-                  <div class="swiper-slide"><img src="assets/honey.svg"></div>
+                  <div class="swiper-slide">
+                    <%= image_tag "colgate.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "g2-org.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "henkel-org.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "stage.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "mahindra-org.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "manyvaar.svg" %>
+                  </div>
+                  <div class="swiper-slide">
+                    <%= image_tag "honey.svg" %>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="ph-client-shadow">
-              <img src="assets/ph-qoute-shadow.svg">
+              <%= image_tag "ph-qoute-shadow.svg" %>
             </div>
           </div>
         </div>
@@ -769,7 +839,7 @@
           </div>
         </div>
         <div class="ph-shadow-back">
-          <img src="assets/ph-qoute-shadow.svg">
+          <%= image_tag "ph-qoute-shadow.svg" %>
         </div>
       </div>
     </div>
@@ -794,7 +864,7 @@
                   <div class="swiper-slide">
                     <div class="img">
                       <div class="circle">
-                        <img src="assets/amine-belkhiria.png" alt="client-img">
+                        <%= image_tag "amine-belkhiria.png" %>
                       </div>
                       <span class="gr-purple-red-bg"></span>
                     </div>
@@ -802,7 +872,7 @@
                   <div class="swiper-slide">
                     <div class="img">
                       <div class="circle">
-                        <img src="assets/lex-lightning.png" alt="client-img">
+                        <%= image_tag "lex-lightning.png" %>
                       </div>
                       <span class="gr-purple-red-bg"></span>
                     </div>
@@ -810,7 +880,7 @@
                   <div class="swiper-slide">
                     <div class="img">
                       <div class="circle">
-                        <img src="assets/mate-andrasi.png" alt="client-img">
+                        <%= image_tag "mate-andrasi.png" %>
                       </div>
                       <span class="gr-purple-red-bg"></span>
                     </div>
@@ -818,8 +888,7 @@
                   <div class="swiper-slide">
                     <div class="img">
                       <div class="circle">
-                        <img src="assets/aleksandar-mishachkovski.png"
-                        alt="client-img">
+                        <%= image_tag "aleksandar-mishachkovski.png" %>
                       </div>
                       <span class="gr-purple-red-bg"></span>
                     </div>
@@ -928,7 +997,7 @@
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog1.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog1.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
@@ -949,7 +1018,7 @@
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog2.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog2.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
@@ -970,7 +1039,7 @@
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog3.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog3.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
@@ -992,7 +1061,7 @@
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog1.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog1.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
@@ -1013,7 +1082,7 @@
               <div class="ph-blog-box wow fadeInUp">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog2.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog2.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
@@ -1034,7 +1103,7 @@
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
                   <a href="javascript:;">
-                    <img src="assets/ph-blog3.jpg" alt="blog-images">
+                    <%= image_tag "ph-blog3.jpg" %>
                   </a>
                   <a href="javascript:;" class="ph-blog-date">Categories <i
                     class="fa-solid fa-arrow-trend-up"></i>
