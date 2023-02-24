@@ -1,0 +1,5 @@
+<% if @developer.errors.present? %>
+  alert("<%= @developer.errors.attribute_names.join(', ').titleize + " must exist." %>")
+<% else %>
+  window.location.href = "<%= ENV['HOST_URL'] %>/thank_you"
+<% end %>

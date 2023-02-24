@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  def thank_you; end
+
   def index; end
 
   def who_we_are; end
@@ -57,7 +59,7 @@ class HomeController < ApplicationController
 
   def gallery; end
 
-  def contact_us; end
+  def contact_us;  end
 
   def terms_policy; end
 

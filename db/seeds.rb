@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+AdminUser.create!(email: 'contact@protonshub.in', password: 'Protonshub@2023', password_confirmation: 'Protonshub@2023') unless AdminUser.where(email: "contact@protonshub.in").present?

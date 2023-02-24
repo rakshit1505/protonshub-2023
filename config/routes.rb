@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   root to: 'home#index'
 
   get '/agritech', to: 'home#agritech'
@@ -40,4 +42,9 @@ Rails.application.routes.draw do
   get '/node_js', to: 'home#node_js'
   get '/python', to: 'home#python'
   get '/ror', to: 'home#ror'
+  get '/thank_you', to: 'home#thank_you'
+
+  resources :projects, only: :create
+  resources :developers, only: :create
+  resources :partners, only: :create
 end
