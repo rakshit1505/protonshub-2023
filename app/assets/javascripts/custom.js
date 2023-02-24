@@ -9,7 +9,7 @@
         this.initialised = true;
       } else {
         return;
-      }  
+      }
       this.preloader();
       this.slider();
       this.counter();
@@ -19,17 +19,17 @@
     },
 
     // preloader start
-    preloader: function () {   
-      $(window).on('load', function () {      
+    preloader: function () {
+      $(window).on('load', function () {
         setTimeout(function () {
           $('.ph-preloader-wrap').addClass('ph-preloder-loaded');
         }, 150);
       });
     },
-        // preloader end
+    // preloader end
 
 
-        // blog slider start
+    // blog slider start
     slider: function () {
       if ($(".ph-myswiper-slide").length > 0) {
         var swiper = new Swiper(".ph-myswiper-slide", {
@@ -66,7 +66,7 @@
         });
       };
 
-            // our portfolio slider
+      // our portfolio slider
       var swiper = new Swiper(".ph-portfolio-mySwiper", {
         slidesPerView: 5,
         slidesPerGroup: 1,
@@ -84,12 +84,12 @@
         },
       });
 
-            //client logo slider
+      //client logo slider
       var swiper = new Swiper(".ph-mySwiper", {
         slidesPerView: 5,
         spaceBetween: 20,
         autoplay: true,
-        loop:true,
+        loop: true,
         speed: 1000,
         pagination: {
           el: ".swiper-pagination",
@@ -115,8 +115,8 @@
       });
 
 
-       // Scroll back to top  
-      $(document) .ready(function () {
+      // Scroll back to top  
+      $(document).ready(function () {
         "use strict";
         var progressPath = document.querySelector('.progress-wrap path');
         var pathLength = progressPath.getTotalLength();
@@ -151,7 +151,7 @@
       });
 
 
-            // Testmonial slider 
+      // Testmonial slider 
       var galleryTop = new Swiper('.slider-thumbs .gallery-top', {
         speed: 1000,
         navigation: {
@@ -178,7 +178,7 @@
     },
 
 
-        // counter start
+    // counter start
     counter: function () {
       if ($('.ph-why-choose-grid').length > 0) {
         var a = 0;
@@ -187,22 +187,22 @@
           if (a == 0 && $(window).scrollTop() > oTop) {
             $('.ph-counter-value').each(function () {
               var $this = $(this),
-              countTo = $this.attr('data-count');
+                countTo = $this.attr('data-count');
               $({
                 countNum: $this.text()
               }).animate({
                 countNum: countTo
               },
-              {
-                duration: 3000,
-                easing: 'swing',
-                step: function () {
-                  $this.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                  $this.text(this.countNum);
-                }
-              });
+                {
+                  duration: 3000,
+                  easing: 'swing',
+                  step: function () {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                    $this.text(this.countNum);
+                  }
+                });
             });
             a = 1;
           }
@@ -210,9 +210,9 @@
         });
       }
     },
-        // counter end
+    // counter end
 
-        // main menu start
+    // main menu start
     mainMenu: function () {
       if ($('.ph-main-wrapper').length > 0) {
         var w = window.innerWidth;
@@ -230,9 +230,9 @@
         }
       }
     },
-        // main menu end
+    // main menu end
 
-        // sub menu start
+    // sub menu start
     subMenu: function () {
       if ($('.ph-main-wrapper').length > 0) {
         var w = window.innerWidth;
@@ -245,12 +245,22 @@
         }
       }
     },
-        // sub menu end	
+    // sub menu end	
 
 
   };
-  $(document).ready(function(){
+  $(document).ready(function () {
     protonshub.init();
+    $('.quality-left ul li').hover(function() {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.quality-right ul li').eq(index).addClass('active').siblings().removeClass('active');
+        });
+
+        $('.technical-tk-ul ul li').hover(function() {
+        $(this).toggleClass('active');
+        $('.technical-stack-main').toggleClass('index-top');
+        });
   })
 
 })(jQuery);
