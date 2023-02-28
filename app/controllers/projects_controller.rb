@@ -16,6 +16,10 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:full_name, :email, :contact_number, :service_id, :description, :to_send_nd, :file)
+    params[:project][:city] = request.location.city
+    params[:project][:ip] = request.location.ip
+    params[:project][:country] = request.location.country
+    params[:project][:country_code] = request.location.country_code
+    params.require(:project).permit(:full_name, :email, :contact_number, :service_id, :description, :to_send_nd, :file, :city, :country, :country_code, :ip)
   end
 end

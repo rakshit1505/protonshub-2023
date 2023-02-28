@@ -16,6 +16,10 @@ class DevelopersController < ApplicationController
   private
 
   def dev_params
-    params.require(:developer).permit(:full_name, :email, :contact_number, :technology_id, :description)
+    params[:developer][:city] = request.location.city
+    params[:developer][:ip] = request.location.ip
+    params[:developer][:country] = request.location.country
+    params[:developer][:country_code] = request.location.country_code
+    params.require(:developer).permit(:full_name, :email, :contact_number, :technology_id, :description, :city, :country, :country_code, :ip)
   end
 end

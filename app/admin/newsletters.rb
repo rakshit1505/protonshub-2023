@@ -10,5 +10,6 @@ ActiveAdmin.register Newsletter do
     id_column
     column :email
     column :created_at
+    actions
   end
 end

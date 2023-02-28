@@ -1,9 +1,9 @@
 ActiveAdmin.register Partner do
   menu label: 'Become Partner'
 
-  permit_params :company_name, :website_url, :official_email_id, :contact_person_name, :email_id, :contact_number
+  permit_params :company_name, :website_url, :official_email_id, :contact_person_name, :email_id, :contact_number, :city, :country, :country_code, :ip
 
-  actions :all, except: [:show, :edit]
+  actions :all, except: [:edit]
 
   index do
     selectable_column
@@ -17,5 +17,6 @@ ActiveAdmin.register Partner do
     column 'Download Attached File' do |filename|
       link_to 'Download', rails_blob_path(filename.file, disposition: 'attachment')  if filename.file.present?
     end
+    actions
   end
 end

@@ -261,6 +261,9 @@
         $(this).toggleClass('active');
         $('.technical-stack-main').toggleClass('index-top');
         });
+    $('.remove-errors').on('click', function(){
+       $('.inline-error').html('')
+    })
   })
   
 

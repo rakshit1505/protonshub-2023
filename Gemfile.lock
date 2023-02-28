@@ -127,6 +127,7 @@ GEM
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
+    geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     has_scope (0.8.1)
@@ -318,6 +319,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   ckeditor!
   devise
+  geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick

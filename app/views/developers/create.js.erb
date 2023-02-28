@@ -2,8 +2,10 @@ $('.inline-error').html('')
 <% if @developer.errors.present? %>
   <% @developer.errors.each do |err| %>
     var err_class =  ".dev-error-<%= err.attribute.to_s %>"
-    $(err_class).text("<%= raw err.full_message.downcase %>")
-    $(err_class).addClass('text-danger')
+    if($(err_class).text() == ''){
+      $(err_class).text("<%= raw err.full_message.downcase %>")
+      $(err_class).addClass('text-danger')
+    }
   <% end %>
 <% else %>
   window.location.href = "<%= ENV['HOST_URL'] %>/thank_you"

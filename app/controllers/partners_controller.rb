@@ -16,6 +16,10 @@ class PartnersController < ApplicationController
   private
 
   def partner_params
-    params.require(:partner).permit(:company_name, :website_url, :official_email_id, :contact_person_name, :email, :contact_number, :file)
+    params[:partner][:city] = request.location.city
+    params[:partner][:ip] = request.location.ip
+    params[:partner][:country] = request.location.country
+    params[:partner][:country_code] = request.location.country_code
+    params.require(:partner).permit(:company_name, :website_url, :official_email_id, :contact_person_name, :email, :contact_number, :file, :city, :country, :country_code, :ip)
   end
 end

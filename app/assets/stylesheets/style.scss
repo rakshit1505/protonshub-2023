@@ -3901,6 +3901,10 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     transform: scale(1.03)
 }
 
+.ph-hire-box h4:hover {
+    color: var(--ph-white-color);
+}
+
 .ph-hire-box h4 {
     position: relative;
     font-size: 21px;

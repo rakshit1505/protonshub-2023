@@ -4,12 +4,10 @@ class NewslettersController < ApplicationController
     if @newsletter.save
       respond_to do |format|
         format.js
-        format.html { redirect_to request.referer&.split('/')&.last&.pluralize + "_path" }
       end
     else
       respond_to do |format|
         format.js
-        format.html { redirect_to request.referer&.split('/')&.last&.pluralize + "_path" }
       end
     end
   end
