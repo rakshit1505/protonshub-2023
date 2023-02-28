@@ -34,40 +34,42 @@
                   <h4>Connect for a free Consultation</h4>
                   <p>Guaranteed Response within 12 business hours!</p>
                 </div>
-                <form method="post" class="ph-protons-form" action="">
+                <%= bootstrap_form_for Project.new, url: projects_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                   <div class="row">
-                    <div class="col-md-12">
-                      <input type="text" name="name" placeholder="Full Name*" required="">
-                    </div>
-
-                    <div class="col-md-12">
-                      <input type="email" name="email" placeholder="Email" required="">
-                    </div>
-                    <div class="col-md-12">
-                      <input type="number" name="number" placeholder="Phone*" required="">
-                    </div>
-                    <div class="col-md-12">
-                      <input type="text" name="cname" placeholder="Company Name*" required="">
-                    </div>
-                    <div class="col-md-12">
-                      <select class="form-select" required="">
-                        <option selected>Select Technology*</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="ph-contact-msg mt-0">
-                        <textarea name="message" placeholder="Brief About The Project"
-                        required=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12 text-center d-block">
-                      <a href="javascript:;" class="ph-btn ph-contact-btn">Submit</a>
-                    </div>
+                    <ul>
+                      <li>
+                        <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+                        <span class="inline-error project-error-full_name" style=""></span>
+                      </li>
+                      <li>
+                        <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
+                        <span class="inline-error project-error-email" style=""></span>
+                      </li>
+                      <li>
+                        <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
+                        <span class="inline-error project-error-contact_number" style=""></span>
+                      </li>
+                      <li>
+                        <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
+                        <span class="inline-error project-error-service" style=""></span>
+                      </li>
+                    </ul>
                   </div>
-                </form>
+
+                  <div class="ph-contact-msg">
+                    <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
+                    <span class="inline-error project-error-description" style=""></span>
+                  </div>
+
+                  <div class="col-md-12">
+                    <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file' %>
+                    <span class="inline-error project-error-file" style=""></span>
+                  </div>
+                  <div class="col-md-12 mt-3 text-center d-block">
+                    <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>
@@ -793,7 +795,7 @@
                     <li>Pay as you go</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -811,7 +813,7 @@
                     <li>Complete control on development</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -829,7 +831,7 @@
                     <li>Monthly Billing</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -1076,9 +1078,7 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <div class="ph-getconnect-btn">
-              <a href="javascript:;" class="ph-btn ph-btn-white">Get Connect <i
-                class="fa-solid fa-arrow-right ms-2"></i>
-              </a>
+              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn  ph-btn-white">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
           </div>
         </div>
@@ -1095,3 +1095,4 @@
 
 <!-- Modal -->
 <%= render partial: 'hire_developer' %>
+<%= render partial: 'have_a_project' %>

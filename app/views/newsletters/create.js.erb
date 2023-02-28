@@ -1,0 +1,16 @@
+$('.newsletter_response_message')[0].className = 'newsletter_response_message'
+<% if @newsletter.errors.present? %>
+  <% if  @newsletter.errors.full_messages.to_sentence == "Email has already been taken" %>
+    $('.newsletter_response_message').text("You already subscribed.")
+    $('.newsletter_response_message').addClass('text-warning')
+  <% else %>
+    $('.newsletter_response_message').text("Email must exist.")
+    $('.newsletter_response_message').addClass('text-danger')
+  <% end %>
+<% else %>
+  $('.clear_field').val('')
+  $('.newsletter_response_message').addClass('text-success')
+  $('.newsletter_response_message').addClass('text-success')
+  $('.newsletter_response_message').text("You have subscribed successfully.")
+  $('.newsletter_response_message').addClass('text-success')
+<% end %>

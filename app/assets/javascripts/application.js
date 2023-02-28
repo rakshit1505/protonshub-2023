@@ -1,3 +1,4 @@
+//= require rails-ujs
 //= require jquery-3.6.0.min
 //= require popper
 //= require bootstrap

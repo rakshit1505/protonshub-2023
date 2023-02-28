@@ -15,13 +15,11 @@
               <h1>Award-Winning Custom Software Development Company</h1>
               <p>Transform your digital transformation journey and create an impact today. From Mobile
                 App Development, Web Development, UI/UX Design, and Enterprise Solutions to
-                Dedicated Developers get the <span>best software development services in the
-                  USA</span> under a
+                Dedicated Developers get the <span>best software development services in the USA</span> under a
                 centralized location. </p>
               <h6 class="mt-2">Experience | Expertise | Excellence</h6>
               <div class="ph-banner-btn">
-                <a href="javascript:;" class="ph-btn">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+                <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i></a>
               </div>
             </div>
           </div>
@@ -383,8 +381,7 @@
               service in USA that is free of errors, we believe in making improvements at every stage.
             </p>
             <div class="ph-process-btn">
-              <a href="javascript:;" class="ph-btn">Get Connected <i class="fa-solid fa-arrow-right ms-2 "></i>
-              </a>
+              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
           </div>
         </div>
@@ -1156,26 +1153,35 @@
               </div>
               <%= bootstrap_form_for Project.new, url: projects_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-              <form method="post" class="ph-protons-form" action="">
                 <div class="row">
                   <ul>
                     <li>
-                      <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true %>
+                      <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+                      <span class="inline-error project-error-full_name" style=""></span>
                     </li>
                     <li>
-                      <%= f.email_field :email, placeholder: 'Email Id', hide_label: true %>
+                      <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
+                      <span class="inline-error project-error-email" style=""></span>
                     </li>
                     <li>
-                      <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true %>
+                      <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
+                      <span class="inline-error project-error-contact_number" style=""></span>
                     </li>
                     <li>
-                      <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true} %>
+                      <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
+                      <span class="inline-error project-error-service" style=""></span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="ph-contact-msg">
-                  <%= f.text_area :description, placeholder: 'Project Description', hide_label: true %>
+                  <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
+                  <span class="inline-error project-error-description" style=""></span>
+                </div>
+
+                <div class="col-md-12">
+                  <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file' %>
+                  <span class="inline-error project-error-file" style=""></span>
                 </div>
                 <div class="col-md-12 mt-3 text-center d-block">
                   <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
@@ -1476,9 +1482,7 @@
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="ph-getconnect-btn">
-              <a href="javascript:;" class="ph-btn ph-btn-white">Contact Us Now <i
-                  class="fa-solid fa-arrow-right ms-2"></i>
-              </a>
+              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn ph-btn-white">Contact Us Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
           </div>
         </div>
@@ -1495,3 +1499,4 @@
 
 <!-- Modal -->
 <%= render partial: 'hire_developer' %>
+<%= render partial: 'have_a_project' %>

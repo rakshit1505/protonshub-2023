@@ -45,11 +45,11 @@
                 <span><i class="fa-solid fa-handshake-simple"></i></span> Become Partner
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+           <!--  <li class="nav-item" role="presentation">
               <a href="javascript:;" class="nav-link" id="feedback-detail-tab" data-bs-toggle="pill" data-bs-target="#feedback-detail" role="tab" aria-controls="pills-contact" aria-selected="false">
                 <span><i class="fa-sharp fa-solid fa-comments"></i></span> Feedback
               </a>
-            </li>
+            </li> -->
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="project-detail" role="tabpanel" aria-labelledby="project-detail-tab" tabindex="0">
@@ -64,29 +64,35 @@
                     <div class="row">
                       <ul>
                         <li>
-                          <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true %>
+                          <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error project-error-full_name"></span>
                         </li>
                         <li>
-                          <%= f.email_field :email, placeholder: 'Email Id', hide_label: true %>
+                          <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error project-error-email" style=""></span>
                         </li>
                         <li>
-                          <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true %>
+                          <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error project-error-contact_number" style=""></span>
                         </li>
                       </ul>
                     </div>
                     <div class="ph-contact-msg">
-                      <%= f.text_area :description, placeholder: 'Project Description', hide_label: true %>
+                      <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
+                      <span class="inline-error project-error-description" style=""></span>
                     </div>
                     <div class="row">
                       <div class="col-md-4">
-                        <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true} %>
-                      </div>
-                      <div class="col-md-6 ph-job-apply-form">
-                        <%= f.file_field :file, label: {class: 'ph-file-upload', text: "<i class='fa-solid fa-paperclip me-1'ohy></i> Attach file ".html_safe}%>
-                        <!-- <span class="ph-attech-text">less than MB</span> -->
+                        <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
+                        <span class="inline-error project-error-service" style=""></span>
                       </div>
                       <div class="col-md-6">
-                        <div class="ph-check-box">
+                        <%= f.file_field :file, wrapper: {class: ''}, hide_label: true, class: 'ph-attach-file' %>
+                        <span class="ph-upload-images"></span>
+                        <span class="inline-error project-error-file" style=""></span>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="ph-check-box mt-2 ">
                           <%= f.check_box :to_send_nd, as: :boolean, label: "Please send me a Non Disclosure Agreement<span class='ph-check-small-text'>Your idea is 100% protected by our non disclosure agreement.</span>".html_safe %>
                         </div>
                       </div>
@@ -110,27 +116,32 @@
                     <div class="row">
                       <ul>
                         <li>
-                          <%= f.text_field :company_name, placeholder: 'Company Name', hide_label: true %>
+                          <%= f.text_field :company_name, placeholder: 'Company Name', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-company_name" style=""></span>
                         </li>
                         <li>
-                          <%= f.text_field :website_url, placeholder: 'Website Url', hide_label: true %>
+                          <%= f.text_field :website_url, placeholder: 'Website Url', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-website_url" style=""></span>
                         </li>
                         <li>
-                          <%= f.text_field :official_email_id, placeholder: 'Offical Email Id', hide_label: true %>
+                          <%= f.email_field :official_email_id, placeholder: 'Offical Email Id', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-official_email_id" style=""></span>
                         </li>
                         <li>
-                          <%= f.text_field :contact_person_name, placeholder: 'Contact Person Name', hide_label: true %>
+                          <%= f.text_field :contact_person_name, placeholder: 'Contact Person Name', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-contact_person_name" style=""></span>
                         </li>
                         <li>
-                          <%= f.text_field :email, placeholder: 'Email Id', hide_label: true %>
+                          <%= f.email_field :email, placeholder: 'Email Id', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-email" style=""></span>
                         </li>
                         <li>
-                          <%= f.text_field :contact_number, placeholder: 'Mobile Number', hide_label: true %>
+                          <%= f.phone_field :contact_number, placeholder: 'Mobile Number', hide_label: true, wrapper: {class: ''} %>
+                          <span class="inline-error partner-error-contact_number" style=""></span>
                         </li>
                         <li>
-                          <div class="ph-job-apply-form">
-                            <%= f.file_field :file, label: {class: 'ph-file-upload', text: "<i class='fa-solid fa-paperclip me-1'ohy></i> Attach file ".html_safe}%>
-                          </div>
+                          <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file' %>
+                          <span class="inline-error partner-error-file" style=""></span>
                         </li>
                       </ul>
                     </div>
@@ -143,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="feedback-detail" role="tabpanel" aria-labelledby="feedback-detail-tab" tabindex="0">
+            <!-- <div class="tab-pane fade" id="feedback-detail" role="tabpanel" aria-labelledby="feedback-detail-tab" tabindex="0">
               <div class="ph-contact-form">
                 <div class="ph-contact-highlight">
                   <h5>We value your feedback.</h5>
@@ -187,7 +198,7 @@
                   </form>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -298,25 +309,7 @@
   </section>
 
   <!-- Get Connect sec -->
-  <section class="ph-getconnect-sec wow fadeInUp" data-wow-delay="0.3s">
-    <div class="container">
-      <div class="col-xxl-9 col-xl-12 col-lg-12 col-md-12 mx-auto">
-        <div class="row align-items-center">
-          <div class="col-md-8 col-sm-6">
-            <div class="ph-getconnect-content">
-              <h5>Make a call From</h5>
-              <h1>Lets Build Your Application</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="ph-getconnect-btn">
-              <a href="javascript:;" class="ph-btn ph-btn-white">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <%= render partial: 'connect_sec' %>
   <!-- Get Connect sec -->
   <!-- Middle Content End -->
 
@@ -327,3 +320,4 @@
 
 <!-- Modal -->
 <%= render partial: 'hire_developer' %>
+<%= render partial: 'have_a_project' %>

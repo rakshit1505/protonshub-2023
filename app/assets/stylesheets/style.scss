@@ -15,6 +15,10 @@
 
 }
 
+option{
+    color: black;
+}
+
 *body {
     font-size: 16px;
     line-height: 140% !important;
@@ -73,7 +77,7 @@ select {
 
 .ph-protons-form .form-select {
     border: 1px solid var(--ph-filed-color);
-    color: var(--ph-lightgray-color);
+    color: #000000;
 }
 
 .ph-protons-form .form-select:focus {
@@ -3314,7 +3318,7 @@ label.ph-file-upload:hover {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     border-radius: 50px;
     margin-bottom: 20px;
 }
@@ -4040,7 +4044,25 @@ label.ph-file-upload:hover {
 
 .ph-blog-sidebar .ph-search-bar input {
     border: 0;
-    border-radius: 50px;
+/*    border-radius: 50px;*/
+}
+.ph-newslatter-blogs .form-control {
+    background: transparent;
+}
+
+.ph-newslatter-blogs .input-group-text {
+    background: var(--ph-main-color);
+    border: 0;
+    border-radius: 0;
+}
+.ph-attach-file {
+    height: auto;
+}
+
+.ph-newslatter-blogs .input-group-text button {
+    border: 0;
+    background: var(--ph-main-color);
+    color: var(--ph-white-color) !important;
 }
 
 .ph-blog-sidebar .ph-search-bar {
@@ -5204,6 +5226,15 @@ label.ph-file-upload:hover {
     padding: 140px 0 80px;
 }
 /* business partner end*/
+section.ph-thankyou-sec {
+    padding: 140px 0 120px;
+}
+section.ph-notfound-sec {
+    padding: 140px 0 80px;
+}
+section.ph-internalservererror-sec {
+    padding: 150px 0;
+}
 
 /* Custom style End*/
 
@@ -5315,8 +5346,9 @@ label.ph-file-upload:hover {
 }
 
 .ph-hire-form input,
-.ph-hire-form select {
-    margin-bottom: 15px;
+.ph-hire-form select,
+.ph-hire-form textarea {
+    margin-top: 15px;
 }
 
 .ph-modal-heading {

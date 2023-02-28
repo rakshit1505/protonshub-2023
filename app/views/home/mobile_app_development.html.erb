@@ -18,9 +18,7 @@
                 businesses in standing out from the competition through increased effectiveness and
               continuous digital innovation.</p>
               <div class="ph-banner-btn mt-4">
-                <a href="javascript:;" class="ph-btn">Consult Us <i
-                  class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+                <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Consult Us<i class="fa-solid fa-arrow-right ms-2"></i></a>
               </div>
             </div>
           </div>
@@ -389,9 +387,9 @@
                         we continue to work with them as their needs change.
                       </p>
                       <div class="ph-process-btn">
-                        <a href="javascript:;" class="ph-btn">Get Connected <i
-                          class="fa-solid fa-arrow-right ms-2 "></i>
-                        </a>
+                        <%= link_to healthcare_path, class: 'ph-btn' do %>
+                          Get Connected <i class="fa-solid fa-arrow-right ms-2 "></i>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -439,9 +437,9 @@
                         user-friendly interfaces that increase engagement and maximize ROI.
                       </p>
                       <div class="ph-process-btn">
-                        <a href="javascript:;" class="ph-btn">Get Connected <i
-                          class="fa-solid fa-arrow-right ms-2 "></i>
-                        </a>
+                        <%= link_to logistics_and_travel_path, class: 'ph-btn' do %>
+                          Get Connected <i class="fa-solid fa-arrow-right ms-2 "></i>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -546,9 +544,9 @@
                         buffering and loading times, and enhanced functionality.
                       </p>
                       <div class="ph-process-btn">
-                        <a href="javascript:;" class="ph-btn">Get Connected <i
-                          class="fa-solid fa-arrow-right ms-2 "></i>
-                        </a>
+                        <%= link_to entertainment_path, class: 'ph-btn' do %>
+                          Get Connected <i class="fa-solid fa-arrow-right ms-2 "></i>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -569,9 +567,9 @@
                         functional items to boost a company's growth and profitability.
                       </p>
                       <div class="ph-process-btn">
-                        <a href="javascript:;" class="ph-btn">Get Connected <i
-                          class="fa-solid fa-arrow-right ms-2 "></i>
-                        </a>
+                        <%= link_to food_path, class: 'ph-btn' do %>
+                          Get Connected <i class="fa-solid fa-arrow-right ms-2 "></i>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -713,7 +711,7 @@
                     <li>Pay as you go</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -731,7 +729,7 @@
                     <li>Complete control on development</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -749,7 +747,7 @@
                     <li>Monthly Billing</li>
                   </ul>
                   <div class="ph-process-btn ph-plan-btn">
-                    <a href="javascript:;" class="ph-btn">Get Started</a>
+                    <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn">Get Started</a>
                   </div>
                 </div>
                 <div class="ph-circle-top"></div>
@@ -996,9 +994,7 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <div class="ph-getconnect-btn">
-              <a href="javascript:;" class="ph-btn ph-btn-white">Get Connect <i
-                class="fa-solid fa-arrow-right ms-2"></i>
-              </a>
+              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn  ph-btn-white">Get Connect <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
           </div>
         </div>
@@ -1015,3 +1011,4 @@
 
 <!-- Modal -->
 <%= render partial: 'hire_developer' %>
+<%= render partial: 'have_a_project' %>

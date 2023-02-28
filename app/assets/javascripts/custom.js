@@ -262,6 +262,7 @@
         $('.technical-stack-main').toggleClass('index-top');
         });
   })
+  
 
 })(jQuery);
 

@@ -62,4 +62,3 @@ gem 'arctic_admin'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem "mini_magick"
 gem "bootstrap_form", "~> 5.1"
-

@@ -1,37 +1,41 @@
-<div class="modal ph-modal-blur fade" id="ph-hire-developer" tabindex="-1">
+<div class="modal ph-modal-blur fade" id="ph-have-a-project" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <button type="button" class="btn-close ph-close-btn" data-bs-dismiss="modal"
       aria-label="Close"></button>
       <div class="ph-contact-field ph-hire-form">
         <div class="ph-modal-heading">
-          <h4>Hire Developer</h4>
+          <h4>Have a Project</h4>
           <p>Create Stunning App & websites for your online business.</p>
         </div>
-        <%= bootstrap_form_for Developer.new, url: developers_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
+        <%= bootstrap_form_for Project.new, url: projects_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <div class="row">
             <div class="col-md-12">
               <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
-              <span class="inline-error dev-error-full_name" style=""></span>
+              <span class="inline-error project-error-full_name" style=""></span>
             </div>
             <div class="col-md-12">
               <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
-              <span class="inline-error dev-error-email" style=""></span>
+              <span class="inline-error project-error-email" style=""></span>
             </div>
             <div class="col-md-12">
               <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
-              <span class="inline-error dev-error-contact_number" style=""></span>
+              <span class="inline-error project-error-contact_number" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.collection_select :technology_id, Technology.activated, :id, :name, {include_blank: ("Select Technology"), hide_label: true, wrapper: {class: ''}} %>
-              <span class="inline-error dev-error-technology" style=""></span>
+              <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
+              <span class="inline-error project-error-service" style=""></span>
             </div>
             <div class="col-md-12">
               <div class="ph-contact-msg mt-0">
-                <%= f.text_area :description, placeholder: 'Brief About The Project', hide_label: true, wrapper: {class: ''} %>
-                <span class="inline-error dev-error-description" style=""></span>
+                <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
+                <span class="inline-error project-error-description" style=""></span>
               </div>
+            </div>
+            <div class="col-md-12">
+              <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file' %>
+              <span class="inline-error project-error-file" style=""></span>
             </div>
             <div class="col-md-12 text-center d-block">
               <%= f.submit "Submit", class: "ph-btn ph-contact-btn" %>
