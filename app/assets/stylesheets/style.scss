@@ -25,7 +25,6 @@ option{
     color: var(--ph-black-color);
     font-family: var(--ph-font-family);
 
-
 }
 
 .ph-bg-color {
@@ -227,7 +226,6 @@ section {
 
 /* preloder end */
 
-
 /* scroll bottom to top start*/
 .progress-wrap {
     position: fixed;
@@ -295,7 +293,6 @@ section {
 
 /* scroll bottom to top end */
 
-
 /* main header start */
 .ph-main-header {
     height: 74px;
@@ -313,7 +310,7 @@ section {
 }
 
 .ph-logo img {
-    max-height: 60px;
+    max-height: 54px;
 }
 
 .ph-main-header .row {
@@ -456,7 +453,7 @@ section {
     margin-bottom: 0;
 }
 
-/*  Ph-banner-sec End */
+/* Ph-banner-sec End */
 
 /* About Sec */
 .ph-awardHome-slide .swiper-wrapper {
@@ -488,7 +485,6 @@ section {
 }
 
 /* End About sec */
-
 
 /*Our Services sec start*/
 .ph-our-service {
@@ -566,6 +562,7 @@ section {
     font-size: 20px;
     padding-bottom: 10px;
     display: inline-block;
+    pointer-events: none;
 }
 
 .ph-our-service-content ul li:last-child a {
@@ -733,11 +730,13 @@ section {
     font-weight: 500;
     padding-bottom: 20px;
 }
+
 .ph-technologies-sec .nav-tabs.ph-tech-nav .nav-link {
     border: 0 solid transparent;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 .ph-technologies-sec .nav-link.active {
     border: 0;
     position: relative;
@@ -745,6 +744,7 @@ section {
     transition: all 0.3s;
     background: transparent;
 }
+
 .ph-technologies-sec .nav-link.active:before {
     content: '';
     position: absolute;
@@ -755,27 +755,30 @@ section {
     border-radius: 2px;
     background: var(--ph-main-color);
 }
+
 .ph-technologies-sec .ph-tech-nav {
     justify-content: space-between;
     grid-gap: 40px;
     margin-bottom: 40px;
     border-bottom: 2px solid var(--ph-filed-color);
 }
+
 .ph-Technologies-list ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: auto;
     grid-gap: 40px 15px;
 }
+
 .ph-Technologies-list ul li {
     text-align: center;
 }
+
 .ph-Technologies-list ul li h6 {
     margin-top: 10px;
     font-weight: 400;
     font-size: 14px;
 }
-
 
 .technologies-sec {
     background: url(our-process-bg.jpg) no-repeat center center;
@@ -1361,7 +1364,6 @@ section {
     max-width: 64%;
 }
 
-
 .technical-main-img {
     text-align: center
 }
@@ -1595,7 +1597,6 @@ section {
     height: 95%;
 }
 
-
 .technical-tk-ul>ul>li.active ul li::before {
     opacity: 1;
 }
@@ -1686,7 +1687,6 @@ section {
     padding: 45px 0;
 }
 
-
 /* technologies sec end */
 
 /* Our client sec start */
@@ -1734,7 +1734,6 @@ section {
 }
 
 /* Our client sec end */
-
 
 /* Counter map sec start */
 .ph-counter-map {
@@ -2177,7 +2176,6 @@ label.ph-file-upload:hover {
 
 /* Testmonial sec end */
 
-
 /* blog sec start */
 .ph-blog-box {
     box-shadow: 0px 10px 16px 0 RGB(11 2 28 / 5%);
@@ -2335,14 +2333,14 @@ label.ph-file-upload:hover {
 }
 
 /* .ph-ourTeam-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: RGB(0, 0, 0);
-    background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background: RGB(0, 0, 0);
+background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 } */
 
 .ph-OurTeam-content .ph-heading-title {
@@ -2641,6 +2639,190 @@ label.ph-file-upload:hover {
     left: -5px;
     bottom: -8px;
     max-width: 70px;
+}
+
+.ph-career-360 .ph-career-circle{
+    background: var(--ph-darkgray-color);
+    width: 100%;
+    max-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    position: absolute;
+    bottom: -135px;
+    right: -135px;
+    overflow: hidden;
+    color: var(--ph-white-color);
+    transition: all 0.3s;
+}
+.ph-career-360 .ph-career-circle h6 {
+    padding: 58px 38px;
+    font-size: 22px;
+    font-weight: 400;
+
+}
+.ph-career-360 .ph-career-circle1{
+    background: var(--ph-darkgray-color);
+    width: 100%;
+    max-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    position: absolute;
+    bottom: -135px;
+    left: -135px;
+    overflow: hidden;
+    color: var(--ph-white-color);
+    transition: all 0.5s;
+    transition: all 0.3s;
+}
+.ph-career-360 .ph-career-circle1 h6 {
+    padding: 60px 0 0 115px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+.ph-career-360 .ph-career-circle2{
+    background: var(--ph-darkgray-color);
+    width: 100%;
+    max-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    position: absolute;
+    top: -135px;
+    right: -135px;
+    overflow: hidden;
+    color: var(--ph-white-color);
+    transition: all 0.3s;
+}
+.ph-career-360 .ph-career-circle2 h6 {
+    padding: 58px 38px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    top: 100px;
+}
+.ph-career-360:hover {
+    box-shadow: 0px 6px 16px 0px #0c05351f;
+    transform: scale(1.01);
+    border-color: var(--ph-filed-color);
+}
+.ph-career-360:hover .ph-career-circle{
+    background: var(--ph-black-color);
+}
+.ph-career-360:hover .ph-career-circle1{
+    background: var(--ph-black-color);
+}
+.ph-career-360:hover .ph-career-circle2{
+    background: var(--ph-black-color);
+}
+.ph-career-360:hover .ph-career-circle3{
+    background: var(--ph-black-color);
+}
+.ph-career-360 .ph-career-circle3{
+    background: var(--ph-darkgray-color);
+    width: 100%;
+    max-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    margin-left: auto;
+    position: absolute;
+    top: -135px;
+    left: -135px;
+    overflow: hidden;
+    color: var(--ph-white-color);
+    transition: all 0.3s;
+}
+.ph-career-360 .ph-career-circle3 h6{
+    padding: 60px 0 0 105px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.ph-career-360 {
+    position: relative;
+    border: 1px solid var(--ph-lightgray-color);
+    overflow: hidden;
+    height: calc(100% - 24px);
+    margin: 12px 0;
+    padding: 30px;
+    transition: all 0.5s;
+    border-radius: 8px;
+    background: var(--ph-white-color);
+}
+
+.ph-career-360.ph-careerpad-right {
+    padding-right: 80px;
+}
+
+.ph-career-360.ph-careerpad-left {
+    padding-left: 130px;
+}
+.ph-career-360 h5 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.ph-career-360 ul li {
+    position: relative;
+    padding-left: 14px;
+    line-height: 30px;
+    font-size: 14px;
+    color: var(--ph-darkgray-color);
+}
+
+.ph-career-360 ul li:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: var(--ph-darkgray-color);
+    border-radius: 50px;
+}
+.ph-hire-career {
+    padding: 15px 24px 20px;
+}
+
+.ph-hire-career .ph-job-describe ul li {
+    font-size: 14px;
+    padding-bottom: 10px;
+    line-height: 24px;
+    position: relative;
+    padding-left: 13px;
+}
+
+.ph-hire-career .ph-job-describe ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background: var(--ph-darkgray-color);
+    border-radius: 50px;
+}
+
+.ph-hire-career .ph-job-describe ul {
+    margin-bottom: 15px;
+}
+.ph-modal-heading.ph-details-describe h6 {
+    margin-bottom: 0;
+}
+
+.ph-modal-heading.ph-details-describe {
+    padding: 13px 24px;
+    border-bottom: 1px solid var(--ph-lightgray-color);
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 /* Carrers page end */
@@ -3387,7 +3569,6 @@ label.ph-file-upload:hover {
     transition: all 0.3s;
 }
 
-
 /* core value end */
 
 /* infrastructure start */
@@ -3446,7 +3627,6 @@ label.ph-file-upload:hover {
 }
 
 /* infrastructure end */
-
 
 /* contact map start */
 .ph-map-address ul {
@@ -3578,7 +3758,7 @@ label.ph-file-upload:hover {
     border-radius: 0px;
     background: var(--ph-white-color);
     position: relative;
-    margin-top: -80px;
+    margin-top: -30px;
 }
 
 .ph-social-icon ul {
@@ -3692,6 +3872,11 @@ label.ph-file-upload:hover {
     background: url(hire-dedicated.webp) no-repeat center center;
     background-size: cover;
     position: relative;
+}
+
+.ph-agritech-bg{
+    background: url(agritech-banner.webp) no-repeat center center;
+    background-size: cover;
 }
 
 .ph-hire-box {
@@ -4637,7 +4822,14 @@ label.ph-file-upload:hover {
     padding-bottom: 150px;
     background-size: 100%;
 }
-
+.ph-agritech-bottom{
+    background: url(agritech-paralex.webp) no-repeat bottom center;
+    padding-bottom: 150px;
+    background-size: 100%;  
+}
+.ph-agritech-sec{
+    background: url(agritech-bh-text) no-repeat right center;
+}
 .ph-logistics-bottom {
     background: url(logistics-banner-bottom.webp) no-repeat bottom center;
     background-size: 100%;
@@ -5197,34 +5389,41 @@ label.ph-file-upload:hover {
     justify-content: center;
     align-items: center;
 }
-.ph-event-banner{
+
+.ph-event-banner {
     background: url(event-banner.png) no-repeat center center;
     background-size: cover;
     padding: 150px 0 80px;
 }
 
-.ph-eventBanner-content h1{
+.ph-eventBanner-content h1 {
     color: var(--ph-white-color);
 }
+
 .ph-eventBanner-content h4 {
     color: var(--ph-main-color);
     padding-top: 30px;
 }
-.ph-eventBanner-content {text-align: center;}
+
+.ph-eventBanner-content {
+    text-align: center;
+}
 
 .ph-eventBanner-content h6 {
     font-weight: 300;
     color: var(--ph-white-color)
 }
+
 /* event end */
 
 /* business partner start */
 
-.ph-business-partner{
+.ph-business-partner {
     background: url(business-banner.webp) no-repeat center center;
     background-size: cover;
     padding: 140px 0 80px;
 }
+
 /* business partner end*/
 section.ph-thankyou-sec {
     padding: 140px 0 120px;
@@ -5237,7 +5436,6 @@ section.ph-internalservererror-sec {
 }
 
 /* Custom style End*/
-
 
 /*footer sec start*/
 .ph-footer-logo img {
@@ -5339,7 +5537,6 @@ section.ph-internalservererror-sec {
 
 /* footer sec start */
 
-
 /* modal start */
 .ph-hire-form {
     padding: 30px 40px;
@@ -5374,14 +5571,15 @@ section.ph-internalservererror-sec {
     transition: all 0.3s;
     background-color: var(--ph-white-color);
     box-shadow: 0 0 10px 0 #060c2e45;
+    opacity: 0.8;
 }
 
-body.modal-open> :not(.ph-modal-blur.modal) {
-    opacity: 1;
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    background-color: RGB(63 63 63 / 54%);
-}
+// body.modal-open> :not(.ph-modal-blur.modal) {
+//     opacity: 1;
+//     -webkit-backdrop-filter: blur(6px);
+//     backdrop-filter: blur(6px);
+//     background-color: RGB(63 63 63 / 54%);
+// }
 
 .ph-modal-blur .modal-content {
     border: 0;
@@ -5389,7 +5587,6 @@ body.modal-open> :not(.ph-modal-blur.modal) {
 }
 
 /* modal end */
-
 
 /* Responsive start */
 @media (min-width: 1399px) {
@@ -5626,9 +5823,315 @@ body.modal-open> :not(.ph-modal-blur.modal) {
     .ph-infrastructure-content {
         padding: 20px;
     }
+
+    .technical-stack-ul ul li.codeigniter {
+        top: 90px;
+    }
+
+    .technical-stack-ul ul li.flutter {
+        left: 110px;
+    }
+
+    .technical-stack-ul ul li.joomla {
+        left: 220px;
+    }
+
+    .technical-stack-ul ul li.aws {
+        top: 72px;
+        left: 110px;
+    }
+
+    .technical-stack-ul ul li.angularjs {
+        top: 90px;
+        left: 205px;
+    }
+
+    .technical-stack-ul ul li.css3 {
+        top: 150px;
+        left: 110px;
+    }
+
+    .technical-stack-ul ul li.android {
+        top: 170px;
+        left: 190px;
+    }
+
+    .technical-stack-ul ul li.html5 {
+        top: 190px;
+        left: 25px;
+    }
+
+    .technical-stack-ul ul li.kotlin {
+        top: 223px;
+        left: 120px;
+    }
+
+    .technical-stack-ul ul li.drupal {
+        top: 260px;
+        left: 210px;
+    }
+
+    .technical-stack-ul ul li.illustrator {
+        top: 275px;
+        left: 65px;
+    }
+
+    .technical-stack-ul ul li.jquery {
+        top: 328px;
+        left: 10px;
+    }
+
+    .technical-stack-ul ul li.javascript {
+        top: 330px;
+        left: 140px;
+    }
+
+    .technical-stack-ul ul li.ios {
+        top: 345px;
+        left: 240px;
+    }
+
+    .technical-stack-ul ul li.laravel {
+        top: 10px;
+        right: 10px;
+    }
+
+    .technical-stack-ul ul li.photoshop {
+        top: 5px;
+        right: 110px;
+    }
+
+    .technical-stack-ul ul li.swift {
+        right: 220px;
+    }
+
+    .technical-stack-ul ul li.magento {
+        top: 90px;
+        right: 205px;
+    }
+
+    .technical-stack-ul ul li.less {
+        top: 72px;
+        right: 110px;
+    }
+
+    .technical-stack-ul ul li.mongodb {
+        top: 90px;
+        right: 15px;
+    }
+
+    .technical-stack-ul ul li.figma {
+        top: 170px;
+        right: 190px;
+    }
+
+    .technical-stack-ul ul li.nodejs {
+        top: 150px;
+        right: 110px;
+    }
+
+    .technical-stack-ul ul li.mysql {
+        top: 190px;
+        right: 25px;
+    }
+
+    .technical-stack-ul ul li.php {
+        top: 223px;
+        right: 120px;
+    }
+
+    .technical-stack-ul ul li.shopify {
+        top: 260px;
+        right: 210px;
+    }
+
+    .technical-stack-ul ul li.react-native {
+        top: 288px;
+        right: 10px;
+    }
+
+    .technical-stack-ul ul li.react {
+        top: 350px;
+        right: 190px;
+    }
+
+    .technical-stack-ul ul li.rubyonrails {
+        top: 350px;
+        right: 110px;
+    }
+
+    .technical-stack-ul ul li.wordpress {
+        top: 370px;
+        right: 10px;
+    }
+
+    .technical-main-img span {
+        width: 360px;
+        height: 360px;
+    }
+
+    .technical-main-img span img {
+        max-width: 50%;
+    }
+
+    .technical-tk-ul>ul>li:nth-child(2) {
+        top: 55px;
+        left: 75px;
+    }
+
+    .technical-tk-ul>ul>li:nth-child(1) {
+        left: 40px;
+        top: 247px;
+    }
+
+    .technical-tk-ul>ul>li:nth-child(4) {
+        left: 317px;
+        top: 247px;
+    }
+
+    .technical-tk-ul>ul>li:nth-child(3) {
+        left: 275px;
+        top: 55px;
+    }
+
+    .technical-tk-ul ul li ul li.css3 {
+        top: -97px;
+        left: -171px;
+    }
+
+    .technical-tk-ul ul li ul li.html5 {
+        top: -56px;
+        left: -255px;
+    }
+
+    .technical-tk-ul ul li ul li.javascript {
+        top: 84px;
+        left: -140px;
+    }
+
+    .technical-tk-ul ul li ul li.angular {
+        top: -158px;
+        left: -75px;
+    }
+
+    .technical-tk-ul ul li ul li.react {
+        top: 98px;
+        right: -315px;
+    }
+
+    .technical-tk-ul ul li ul li.less {
+        top: -175px;
+        right: -445px;
+    }
+
+    .technical-tk-ul ul li ul li.jquery {
+        top: 81px;
+        left: -270px;
+    }
+
+    .technical-tk-ul ul li ul li.php {
+        right: -400px;
+        top: 168px;
+    }
+
+    .technical-tk-ul ul li ul li.codeigniter {
+        left: -300px;
+        top: 35px;
+    }
+
+    .technical-tk-ul ul li ul li.drupal {
+        top: 205px;
+        left: -105px;
+    }
+
+    .technical-tk-ul ul li ul li.joomla {
+        top: -55px;
+        left: -95px;
+    }
+
+    .technical-tk-ul ul li ul li.laravel {
+        top: -46px;
+        right: -510px;
+    }
+
+    .technical-tk-ul ul li ul li.magento {
+        top: 35px;
+        right: -315px;
+    }
+
+    .technical-tk-ul ul li ul li.mysql {
+        top: 136px;
+        right: -495px;
+    }
+
+    .technical-tk-ul ul li ul li.nodejs {
+        top: 95px;
+        right: -410px;
+    }
+
+    .technical-tk-ul ul li ul li.rubyonrails {
+        top: 245px;
+        right: -380px;
+    }
+
+    .technical-tk-ul ul li ul li.shopify {
+        top: 205px;
+        right: -310px;
+    }
+
+    .technical-tk-ul ul li ul li.android {
+        top: 115px;
+        left: -325px;
+    }
+
+    .technical-tk-ul ul li ul li.ios {
+        top: 290px;
+        left: -276px;
+    }
+
+    .technical-tk-ul ul li ul li.flutter {
+        top: -50px;
+        left: -405px;
+    }
+
+    .technical-tk-ul ul li ul li.kotlin {
+        left: -395px;
+        top: 168px;
+    }
+
+    .technical-tk-ul ul li ul li.react-native {
+        right: -311px;
+        top: 233px;
+    }
+
+    .technical-tk-ul ul li ul li.swift {
+        top: -55px;
+        right: -100px;
+    }
+
+    .technical-tk-ul ul li ul li.adobe-xd {
+        top: -237px;
+        left: -547px;
+    }
+
+    .technical-tk-ul ul li ul li.illustrator {
+        top: 28px;
+        left: -492px;
+    }
+
+    .technical-tk-ul ul li ul li.photoshop {
+        top: -242px;
+        right: -168px;
+    }
+
+    .technical-tk-ul ul li ul li.figma {
+        top: -77px;
+        right: -88px;
+    }
 }
 
 @media screen and (max-width: 991.5px) {
+
     .ph-main-banner {
         padding: 120px 0 50px;
     }
@@ -5650,7 +6153,6 @@ body.modal-open> :not(.ph-modal-blur.modal) {
         padding: 15px;
     }
 
-
     .ph-process-in {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0 50px;
@@ -5661,7 +6163,6 @@ body.modal-open> :not(.ph-modal-blur.modal) {
     .ph-process-in .ph-process-inner:nth-child(6) {
         margin-top: 0px;
     }
-
 
     .ph-process-in .ph-process-inner:nth-child(1):before,
     .ph-process-in .ph-process-inner:nth-child(3):before,
@@ -5694,6 +6195,10 @@ body.modal-open> :not(.ph-modal-blur.modal) {
     .ph-about-left img {
         width: 100%;
         margin-bottom: 15px;
+    }
+
+    .technologies-sec {
+        display: none;
     }
 }
 
@@ -5730,9 +6235,12 @@ body.modal-open> :not(.ph-modal-blur.modal) {
 
     .ph-our-service .ph-tab-nav a {
         padding: 0;
-        font-size: 15px;
+        font-size: 14px;
+        margin-right: 5px;
     }
-
+    .ph-our-service .ph-tab-nav a:last-child {
+        margin-right: 0;
+    }
     .ph-tab-nav {
         margin-bottom: 10px;
     }
@@ -5752,7 +6260,7 @@ body.modal-open> :not(.ph-modal-blur.modal) {
     }
 
     .ph-get-qoute-s {
-        margin-top: -200px;
+        margin-top: auto;
         padding: 10px 0;
     }
 
@@ -5898,7 +6406,7 @@ body.modal-open> :not(.ph-modal-blur.modal) {
     }
 
     .ph-ourClient-logo {
-        margin-bottom: 130px;
+        margin-bottom: auto;
         margin-top: 0;
         z-index: 9;
         padding: 15px;
@@ -6087,5 +6595,8 @@ body.modal-open> :not(.ph-modal-blur.modal) {
 
     .ph-close-btn {
         font-size: 10px;
+    }
+    .ph-process-btn .ph-btn{
+        margin-top: 10px;
     }
 }
