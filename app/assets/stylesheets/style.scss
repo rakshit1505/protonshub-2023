@@ -76,7 +76,7 @@ select {
 
 .ph-protons-form .form-select {
     border: 1px solid var(--ph-filed-color);
-    color: #000000;
+    color: var(--ph-lightgray-color);
 }
 
 .ph-protons-form .form-select:focus {
@@ -3477,12 +3477,14 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-all-answers ul li {
     background: var(--ph-white-color);
     padding: 0px 20px 20px;
-    box-shadow: 0 0 15px 0 RGB(19 29 88 / 6%);
-    border-radius: 5px;
+    box-shadow: 0 0 20px 0 RGB(19 29 88 / 6%);
+    border-radius: 15px;
     position: relative;
-    overflow: hidden;
+    transition: all 0.3s;
 }
-
+.ph-all-answers ul li:hover{
+    transform: translateY(-5px);
+}
 .ph-all-answers ul li h6 {
     margin-bottom: 0;
 }
@@ -3491,37 +3493,22 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     width: 72px;
     height: 72px;
     margin: -25px auto auto;
-    display: -webkit-box;
-    /* old - ios 6-, safari 3.1-6 */
-    display: -moz-box;
-    /* old - firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* tweener - ie 10 */
-    display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     border-radius: 50px;
     margin-bottom: 20px;
-}
-
-.ph-all-answers ul li .ph-count-ans.ph-bgyellow {
-    background: #F4E5AF;
-}
-
-.ph-all-answers ul li .ph-count-ans.ph-bgblue {
-    background: #B7BFE7;
-}
-
-.ph-all-answers ul li .ph-count-ans.ph-bgred {
-    background: #E9B7B7;
+    border: 6px solid var(--ph-white-color);
+    background: var(--ph-main-color);
+    /* color: red; */
+    box-shadow: 0 0 14px 0 #0a204026;
 }
 
 .ph-all-answers ul li .ph-count-ans h2 {
     margin-bottom: 0;
     color: var(--ph-white-color);
     font-weight: 700;
-    line-height: 50px;
+    line-height: 60px;
 }
 
 /* who we are end*/
@@ -5538,7 +5525,43 @@ section.ph-internalservererror-sec {
     color: var(--ph-filed-color);
     margin-bottom: 0;
 }
+.ph-contact-footer i {
+    font-size: 18px;
+    vertical-align: middle;
+    color: var(--ph-main-color);
+}
+.ph-footer-content .ph-content-f {
+    display: flex;
+    align-items: center;
+}
+.ph-footer-content .ph-content-f {
+    color: var(--ph-white-color);
+}
+.ph-footer-content .ph-content-f p:first-child {
+    margin-right:20px;
+}
+.ph-copy-right p {
+    text-align: left;
+}
 
+.ph-copy-right .ph-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.ph-copy-right .ph-social-icons li a {
+    color: var(--ph-white-color);
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.ph-copy-right .ph-social-icons li a:hover{
+    color: var(--ph-main-color);
+}
+
+.ph-copy-right .ph-social-icons li {
+    margin-left: 28px;
+}
 /* footer sec start */
 
 /* modal start */
