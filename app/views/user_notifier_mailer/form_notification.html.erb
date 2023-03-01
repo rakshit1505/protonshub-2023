@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>There is a new message from <b><%= @contact.full_name %></b></p>
+    <p>Email: <%= @contact.email %>
+    <p>Mobile Number: <%= @contact.contact_number %></p>
+    <p>Country Code: <%= @contact.country_code %></p>
+    <% if @contact.class.name == 'Developer' %>
+      <p>Description: <%= @contact.description %>
+      <p>Technology: <%= @contact.technology&.name %></p>
+    <% elsif @contact.class.name == 'Project' %>
+      <p>Description: <%= @contact.description %>
+      <p>Service: <%= @contact.service&.name %></p>
+    <% end %>
+    <p>City: <%= @contact.city %></p>
+    <p>Country: <%= @contact.country %></p>
+  </body>
+</html>

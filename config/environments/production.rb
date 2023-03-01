@@ -118,4 +118,16 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   HOST_URL = "https://stormy-hamlet-77076.herokuapp.com/"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "https://stormy-hamlet-77076.herokuapp.com" }
+
+  ActionMailer::Base.smtp_settings = {
+    domain: 'protonshub.com',
+    address:        "smtp.sendgrid.net",
+    port:            587,
+    authentication: :plain,
+    user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+    password: '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', # This is the secret sendgrid API key which was issued during API key creation
+  }
 end
