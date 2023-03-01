@@ -10,7 +10,7 @@
       } else {
         return;
       }
-      this.preloader();
+      // this.preloader();
       this.slider();
       this.counter();
       this.mainMenu();
@@ -19,13 +19,13 @@
     },
 
     // preloader start
-    preloader: function () {
-      $(window).on('load', function () {
-        setTimeout(function () {
-          $('.ph-preloader-wrap').addClass('ph-preloder-loaded');
-        }, 150);
-      });
-    },
+    // preloader: function () {
+    //   $(window).on('load', function () {
+    //     setTimeout(function () {
+    //       $('.ph-preloader-wrap').addClass('ph-preloder-loaded');
+    //     }, 150);
+    //   });
+    // },
     // preloader end
 
 

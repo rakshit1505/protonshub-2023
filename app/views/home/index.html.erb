@@ -1145,8 +1145,8 @@
           <div class="col-lg-6">
             <div class="ph-contact-form">
               <div class="ph-heading-title">
-                <h4>Do You Have A Project In Mind?</h4>
-                <p>Guaranteed Response within one Business Day!</p>
+                <h4 class="mb-2">Do You Have A Project In Mind?</h4>
+                <p class="mb-0">Guaranteed Response within one Business Day!</p>
               </div>
               <%= bootstrap_form_for Project.new, url: projects_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -1180,7 +1180,7 @@
                   <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file', hide_label: true %>
                   <span class="inline-error project-error-file" style=""></span>
                 </div>
-                <div class="col-md-12 mt-3 text-center d-block">
+                <div class="col-md-12 mt-4 text-center d-block">
                   <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
                 </div>
               <% end %>
@@ -1345,116 +1345,120 @@
             <div class="swiper-slide">
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog1.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
+                  <%= link_to web_development_trends_of_2023_path do %>
+                    <%= image_tag "blog10-inspiring-web-dev-trends.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
                 </div>
                 <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p>Whether you call them fashionistas or Shopaholics it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
+                  <h6>Jan 20, 2023</h6>
+                  <%= link_to "10 Inspiring Web Development Trends Of 2023 Every CTO Should Be Aware Of", web_development_trends_of_2023_path, class: "ph-blog-title" %>
+                  <p>There are around 1.14 billion websites in existence right now. The market for web development is expanding quickly, and in this cutthroat competition, those that stay on top of the trends succeed.</p>
+                  <%= link_to web_development_trends_of_2023_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog2.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
+                  <%= link_to why_you_should_hire_a_dedicated_remote_developer_in_2023_path do %>
+                    <%= image_tag "blog-remote-dev.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
                 </div>
                 <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p>Whether you call them fashionistas or Shopaholics it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
+                  <h6>Jan 17, 2023</h6>
+                  <%= link_to "Why You Should Hire A Dedicated Remote Developer In 2023", why_you_should_hire_a_dedicated_remote_developer_in_2023_path, class: "ph-blog-title" %>
+                  <p>Not only has COVID-19 encouraged firms to adopt remote working, but it has also assisted them in understanding the advantages of doing so.</p>
+                  <%= link_to why_you_should_hire_a_dedicated_remote_developer_in_2023_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog3.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
+                  <%= link_to how_to_find_the_right_mvp_developer_for_your_startup_idea_path do %>
+                    <%= image_tag "blog-mvp.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
                 </div>
                 <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p>Whether you call them fashionistas or Shopaholics it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="ph-blog-box">
-                <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog1.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
-                </div>
-                <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p>Whether you call them fashionistas or Shopaholics it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="ph-blog-box wow fadeInUp">
-                <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog2.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
-                </div>
-                <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p>Whether you call them fashionistas or Shopaholics it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
+                  <h6>Jan 11, 2023</h6>
+                  <%= link_to "How To Find The Right MVP Developer For Your Startup Idea", how_to_find_the_right_mvp_developer_for_your_startup_idea_path, class: "ph-blog-title" %>
+                  <p>Are you a startup trying to figure out how to maximize the potential of a minimum viable product? But have you given any thought to what makes the <a href="javascript:;">MVP development for your startup</a> successful? Is it the features or the developers?</p>
+                  <%= link_to how_to_find_the_right_mvp_developer_for_your_startup_idea_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="ph-blog-box">
                 <div class="ph-blog-img">
-                  <a href="javascript:;">
-                    <%= image_tag "ph-blog3.jpg" %>
-                  </a>
-                  <a href="javascript:;" class="ph-blog-date">Categories <i class="fa-solid fa-arrow-trend-up"></i>
-                  </a>
+                  <%= link_to how_technology_is_transforming_the_logistics_business_path do %>
+                    <%= image_tag "blog-logistics.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
                 </div>
                 <div class="ph-blog-text">
-                  <h6>Jan 05, 2023</h6>
-                  <a href="javascript:;" class="ph-blog-title">10 Efficient & Measurable</a>
-                  <p class="ph-blog-paragraph">Whether you call them fashionistas or Shopaholics
-                    it makes no difference
-                    either way! Individuals love..</p>
-                  <a href="javascript:;" class="ph-read-more">Read More <i class="fa-solid fa-arrow-right ms-2"></i>
-                  </a>
+                  <h6>Dec 28, 2022</h6>
+                  <%= link_to "How Technology Is Transforming The Logistics Business?", how_technology_is_transforming_the_logistics_business_path, class: "ph-blog-title" %>
+                  <p>Online shopping trends have accelerated eCommerce growth in recent years, which has stimulated the growth of logistics services to optimize the <a href="javascript:;">supply chain management system</a>.</p>
+                  <%= link_to how_technology_is_transforming_the_logistics_business_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+            <div class="ph-blog-box">
+              <div class="ph-blog-img">
+                  <%= link_to healthcare_mobile_app_revenue_tips_8_ways_to_grow_your_business_path do %>
+                    <%= image_tag "blog-healthcare.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
+                </div>
+                <div class="ph-blog-text">
+                  <h6>Dec 22, 2022</h6>
+                  <%= link_to "Healthcare Mobile App Revenue Tips - 8 Ways To Grow Your Business", healthcare_mobile_app_revenue_tips_8_ways_to_grow_your_business_path, class: "ph-blog-title" %>
+                  <p>Are you trying to find ways for your mobile healthcare app to make money but having trouble doing so? Your issue has been resolved here, so let's go on and read the blog to find the perfect solution for you.</p>
+                  <%= link_to healthcare_mobile_app_revenue_tips_8_ways_to_grow_your_business_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ph-blog-box">
+                <div class="ph-blog-img">
+                  <%= link_to impact_of_technology_and_automation_on_education_path do %>
+                    <%= image_tag "blog-ai-automation.webp", alt: "blog-images" %>
+                  <% end %>
+                  <!-- <a href="javascript:;" class="ph-blog-date">
+                    Categories <i class="fa-solid fa-arrow-trend-up"></i>
+                  </a> -->
+                </div>
+                <div class="ph-blog-text">
+                  <h6>Dec 16, 2022</h6>
+                  <%= link_to "Impact Of Technology And Automation On Education", impact_of_technology_and_automation_on_education_path, class: "ph-blog-title" %>
+                  <p>Automation is challenging, but what comes with hardships always pays off. Any industry loss is always attributed to unending demands and resource scarcity.</p>
+                  <%= link_to impact_of_technology_and_automation_on_education_path, class: "ph-read-more" do %>
+                    Read More <i class="fa-solid fa-arrow-right ms-2"></i>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -1479,7 +1483,7 @@
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="ph-getconnect-btn">
-              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn remove-errors ph-btn-white">Contact Us Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+              <a data-bs-toggle="modal" href="#ph-have-a-project" class="ph-btn remove-errors ph-btn-white">Contact Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
           </div>
         </div>
