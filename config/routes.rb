@@ -44,6 +44,25 @@ Rails.application.routes.draw do
   get '/technogies/python-development', to: 'home#python', as: 'python'
   get '/technogies/ruby-on-rails-development', to: 'home#ror', as: 'ror'
 
+  get 'web-development-trends-of-2023', to: 'home#web_development_trends_of_2023', as: 'web_development_trends_of_2023'
+  get 'why-you-should-hire-a-dedicated-remote-developer-in-2023', to: 'home#why_you_should_hire_a_dedicated_remote_developer_in_2023', as: 'why_you_should_hire_a_dedicated_remote_developer_in_2023'
+  get 'how-to-find-the-right-mvp-developer-for-your-startup-idea', to: 'home#how_to_find_the_right_mvp_developer_for_your_startup_idea', as: 'how_to_find_the_right_mvp_developer_for_your_startup_idea'
+  get 'how-technology-is-transforming-the-logistics-business', to: 'home#how_technology_is_transforming_the_logistics_business', as: 'how_technology_is_transforming_the_logistics_business'
+  get 'healthcare-mobile-app-revenue-tips-8-ways-to-grow-your-business', to: 'home#healthcare_mobile_app_revenue_tips_8_ways_to_grow_your_business', as: 'healthcare_mobile_app_revenue_tips_8_ways_to_grow_your_business'
+  get 'impact-of-technology-and-automation-on-education', to: 'home#impact_of_technology_and_automation_on_education', as: 'impact_of_technology_and_automation_on_education'
+  get 'top-mobile-app-ideas-for-restaurant-and-food-industry', to: 'home#top_mobile_app_ideas_for_restaurant_and_food_industry', as: 'top_mobile_app_ideas_for_restaurant_and_food_industry'
+  get 'how-agile-technology-benefits-software-development', to: 'home#how_agile_technology_benefits_software_development', as: 'how_agile_technology_benefits_software_development'
+  get 'tools-a-react-developer-should-know-in-2022', to: 'home#tools_a_react_developer_should_know_in_2022', as: 'tools_a_react_developer_should_know_in_2022'
+  get 'the-ultimate-guide-to-mobile-application-development-2022', to: 'home#the_ultimate_guide_to_mobile_application_development_2022', as: 'the_ultimate_guide_to_mobile_application_development_2022'
+  get 'trending-ui-ux-design', to: 'home#trending_ui_ux_design', as: 'trending_ui_ux_design'
+  get 'multi-tenant-architecture', to: 'home#multi_tenant_architecture', as: 'multi_tenant_architecture'
+  get 'hire-remote-developer', to: 'home#hire_remote_developer', as: 'hire_remote_developer'
+  get 'micro-service', to: 'home#micro_service', as: 'micro_service'
+  get 'content-system', to: 'home#content_system', as: 'content_system'
+  get 'react-mobile-app', to: 'home#react_mobile_app', as: 'react_mobile_app'
+  get 'global-staffing', to: 'home#global_staffing', as: 'global_staffing'
+  get 'outsourcing', to: 'home#outsourcing', as: 'outsourcing'
+
   get '/thank_you', to: 'home#thank_you'
 
   resources :projects, only: :create
