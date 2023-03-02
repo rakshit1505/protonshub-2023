@@ -180,7 +180,7 @@
                 <div class="ph-search-bar">
                   <%= bootstrap_form_for Newsletter.new, url: newsletters_path, remote: true do |f| %>
                     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                    <%= f.email_field :email, append: f.primary("<i class='fa-solid fa-paper-plane'></i>".html_safe, render_as_button: true, class: "ph-search-icon"), hide_label: true, class: 'clear_field', required: true, wrapper: {class: 'ph-newslatter-blogs'}, placeholder: "Enter Email Id" %>
+                    <%= f.email_field_without_bootstrap :email, append: f.primary("<i class='fa-solid fa-paper-plane'></i>".html_safe, render_as_button: true, class: "ph-search-icon"), hide_label: true, class: 'clear_field', required: true, wrapper: {class: 'ph-newslatter-blogs'}, placeholder: "Enter Email Id" %>
                   <% end %>
                 </div>
                 <span class="newsletter_response_message"></span>

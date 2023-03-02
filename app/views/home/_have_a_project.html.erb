@@ -12,15 +12,15 @@
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <div class="row">
             <div class="col-md-12">
-              <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+              <%= f.text_field_without_bootstrap :full_name, placeholder: 'Full Name', hide_label: true %>
               <span class="inline-error project-error-full_name" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
+              <%= f.email_field_without_bootstrap :email, placeholder: 'Email', hide_label: true %>
               <span class="inline-error project-error-email" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
+              <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Contact Number', hide_label: true %>
               <span class="inline-error project-error-contact_number" style=""></span>
             </div>
             <div class="col-md-12">
@@ -29,12 +29,12 @@
             </div>
             <div class="col-md-12">
               <div class="ph-contact-msg mt-0">
-                <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
+                <%= f.text_area_without_bootstrap :description, placeholder: 'Project Description', hide_label: true %>
                 <span class="inline-error project-error-description" style=""></span>
               </div>
             </div>
             <div class="col-md-12">
-              <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file', hide_label: true %>
+              <%= f.file_field_without_bootstrap :file, class: 'ph-attach-file', hide_label: true %>
               <span class="inline-error project-error-file" style=""></span>
             </div>
             <div class="col-md-12 text-center d-block">
