@@ -12,24 +12,24 @@
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
           <div class="row">
             <div class="col-md-12">
-              <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+              <%= f.text_field_without_bootstrap :full_name, placeholder: 'Full Name', hide_label: true %>
               <span class="inline-error dev-error-full_name" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
+              <%= f.email_field_without_bootstrap :email, placeholder: 'Email', hide_label: true %>
               <span class="inline-error dev-error-email" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
+              <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Contact Number', hide_label: true %>
               <span class="inline-error dev-error-contact_number" style=""></span>
             </div>
             <div class="col-md-12">
-              <%= f.collection_select :technology_id, Technology.activated, :id, :name, {include_blank: ("Select Technology"), hide_label: true, wrapper: {class: ''}} %>
+              <%= f.collection_select :technology_id, Technology.activated, :id, :name, {include_blank: ("Select Technology"), hide_label: true , wrapper: {class: ''}} %>
               <span class="inline-error dev-error-technology" style=""></span>
             </div>
             <div class="col-md-12">
               <div class="ph-contact-msg mt-0">
-                <%= f.text_area :description, placeholder: 'Brief About The Project', hide_label: true, wrapper: {class: ''} %>
+                <%= f.text_area_without_bootstrap :description, placeholder: 'Brief About The Project', hide_label: true %>
                 <span class="inline-error dev-error-description" style=""></span>
               </div>
             </div>

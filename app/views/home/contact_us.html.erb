@@ -64,30 +64,26 @@
                     <div class="row">
                       <ul>
                         <li>
-                          <%= f.text_field :full_name, placeholder: 'Full Name', hide_label: true, wrapper: {class: ''} %>
+                          <%= f.text_field_without_bootstrap :full_name, placeholder: 'Full Name', hide_label: true %>
                           <span class="inline-error project-error-full_name"></span>
                         </li>
                         <li>
-                          <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error project-error-email"></span>
+                          <%= f.email_field_without_bootstrap :email, placeholder: 'Email', hide_label: true %>
+                          <span class="inline-error project-error-email" style=""></span>
                         </li>
                         <li>
-                          <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error project-error-contact_number"></span>
-                        </li>
-                        <li> 
-                          <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
-                          <span class="inline-error project-error-service"></span>
+                          <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Contact Number', hide_label: true %>
+                          <span class="inline-error project-error-contact_number" style=""></span>
                         </li>
                       </ul>
                     </div>
                     <div class="ph-contact-msg">
-                      <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
-                      <span class="inline-error project-error-description"></span>
+                      <%= f.text_area_without_bootstrap :description, placeholder: 'Project Description', hide_label: true %>
+                      <span class="inline-error project-error-description" style=""></span>
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <%= f.file_field :file, wrapper: {class: ''}, hide_label: true, class: 'ph-attach-file' %>
+                        <%= f.file_field_without_bootstrap :file, hide_label: true, class: 'ph-attach-file' %>
                         <span class="ph-upload-images"></span>
                         <span class="inline-error project-error-file"></span>
                       </div>
@@ -116,6 +112,7 @@
                     <div class="row">
                       <ul>
                         <li>
+<<<<<<< HEAD
                           <%= f.text_field :company_name, placeholder: 'Company Name', hide_label: true, wrapper: {class: ''} %>
                           <span class="inline-error partner-error-company_name"></span>
                         </li>
@@ -142,6 +139,34 @@
                         <li>
                           <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file', hide_label: true %>
                           <span class="inline-error partner-error-file"></span>
+=======
+                          <%= f.text_field_without_bootstrap :company_name, placeholder: 'Company Name', hide_label: true %>
+                          <span class="inline-error partner-error-company_name" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.text_field_without_bootstrap :website_url, placeholder: 'Website Url', hide_label: true %>
+                          <span class="inline-error partner-error-website_url" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.email_field_without_bootstrap :official_email_id, placeholder: 'Offical Email Id', hide_label: true %>
+                          <span class="inline-error partner-error-official_email_id" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.text_field_without_bootstrap :contact_person_name, placeholder: 'Contact Person Name', hide_label: true %>
+                          <span class="inline-error partner-error-contact_person_name" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.email_field_without_bootstrap :email, placeholder: 'Email Id', hide_label: true %>
+                          <span class="inline-error partner-error-email" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Mobile Number', hide_label: true %>
+                          <span class="inline-error partner-error-contact_number" style=""></span>
+                        </li>
+                        <li>
+                          <%= f.file_field_without_bootstrap :file, class: 'ph-attach-file', hide_label: true %>
+                          <span class="inline-error partner-error-file" style=""></span>
+>>>>>>> dc594b1c6718221079f8f7a30d98989fe09912ed
                         </li>
                       </ul>
                     </div>
