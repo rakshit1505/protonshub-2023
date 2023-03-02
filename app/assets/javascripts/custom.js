@@ -69,7 +69,6 @@
       // our portfolio slider
       var swiper = new Swiper(".ph-portfolio-mySwiper", {
         slidesPerView: 5,
-        slidesPerGroup: 1,
         autoplay: true,
         speed: 1000,
         loop: true,
@@ -81,6 +80,20 @@
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          575: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          }
         },
       });
 

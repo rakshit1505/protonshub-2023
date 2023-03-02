@@ -69,34 +69,34 @@
                         </li>
                         <li>
                           <%= f.email_field :email, placeholder: 'Email', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error project-error-email" style=""></span>
+                          <span class="inline-error project-error-email"></span>
                         </li>
                         <li>
                           <%= f.phone_field :contact_number, placeholder: 'Contact Number', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error project-error-contact_number" style=""></span>
+                          <span class="inline-error project-error-contact_number"></span>
+                        </li>
+                        <li> 
+                          <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
+                          <span class="inline-error project-error-service"></span>
                         </li>
                       </ul>
                     </div>
                     <div class="ph-contact-msg">
                       <%= f.text_area :description, placeholder: 'Project Description', hide_label: true, wrapper: {class: ''} %>
-                      <span class="inline-error project-error-description" style=""></span>
+                      <span class="inline-error project-error-description"></span>
                     </div>
                     <div class="row">
-                      <div class="col-md-4">
-                        <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
-                        <span class="inline-error project-error-service" style=""></span>
-                      </div>
                       <div class="col-md-6">
                         <%= f.file_field :file, wrapper: {class: ''}, hide_label: true, class: 'ph-attach-file' %>
                         <span class="ph-upload-images"></span>
-                        <span class="inline-error project-error-file" style=""></span>
+                        <span class="inline-error project-error-file"></span>
                       </div>
                       <div class="col-md-6">
-                        <div class="ph-check-box mt-2 ">
+                        <div class="ph-check-box">
                           <%= f.check_box :to_send_nd, as: :boolean, label: "Please send me a Non Disclosure Agreement<span class='ph-check-small-text'>Your idea is 100% protected by our non disclosure agreement.</span>".html_safe %>
                         </div>
                       </div>
-                      <div class="col-md-12 mt-5 text-center d-block">
+                      <div class="col-md-12 mt-3 text-center d-block">
                         <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
                       </div>
                     </div>
@@ -117,36 +117,36 @@
                       <ul>
                         <li>
                           <%= f.text_field :company_name, placeholder: 'Company Name', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-company_name" style=""></span>
+                          <span class="inline-error partner-error-company_name"></span>
                         </li>
                         <li>
                           <%= f.text_field :website_url, placeholder: 'Website Url', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-website_url" style=""></span>
+                          <span class="inline-error partner-error-website_url"></span>
                         </li>
                         <li>
                           <%= f.email_field :official_email_id, placeholder: 'Offical Email Id', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-official_email_id" style=""></span>
+                          <span class="inline-error partner-error-official_email_id"></span>
                         </li>
                         <li>
                           <%= f.text_field :contact_person_name, placeholder: 'Contact Person Name', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-contact_person_name" style=""></span>
+                          <span class="inline-error partner-error-contact_person_name"></span>
                         </li>
                         <li>
                           <%= f.email_field :email, placeholder: 'Email Id', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-email" style=""></span>
+                          <span class="inline-error partner-error-email"></span>
                         </li>
                         <li>
                           <%= f.phone_field :contact_number, placeholder: 'Mobile Number', hide_label: true, wrapper: {class: ''} %>
-                          <span class="inline-error partner-error-contact_number" style=""></span>
+                          <span class="inline-error partner-error-contact_number"></span>
                         </li>
                         <li>
                           <%= f.file_field :file, wrapper: {class: ''}, class: 'ph-attach-file', hide_label: true %>
-                          <span class="inline-error partner-error-file" style=""></span>
+                          <span class="inline-error partner-error-file"></span>
                         </li>
                       </ul>
                     </div>
                     <div class="row">
-                      <div class="col-md-12 mt-5 text-center d-block">
+                      <div class="col-md-12 mt-3 text-center d-block">
                         <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
                       </div>
                     </div>
@@ -154,51 +154,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="tab-pane fade" id="feedback-detail" role="tabpanel" aria-labelledby="feedback-detail-tab" tabindex="0">
-              <div class="ph-contact-form">
-                <div class="ph-contact-highlight">
-                  <h5>We value your feedback.</h5>
-                  <p>Please complete the following form and help us improve our customer experience.</p>
-                </div>
-                <div class="ph-contact-field">
-                  <form method="post" class="ph-protons-form" action="">
-                    <div class="row">
-                      <ul>
-                        <li>
-                          <input type="text" name="name" placeholder="Jhon Due" required />
-                        </li>
-                        <li>
-                          <input type="email" name="email" placeholder="Email Id/Skype Id" required />
-                        </li>
-                        <li>
-                          <input type="number" name="number" placeholder="Mobile Number" required />
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="ph-contact-msg">
-                      <textarea name="message" placeholder="Project Description" required></textarea>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6 ph-job-apply-form">
-                        <label for="file-upload" class="ph-file-upload"> <i class="fa-solid fa-paperclip me-1"></i> Attach file </label>
-                        <input id="file-upload" type="file" name="file" required />
-                        <span class="ph-attech-text">less than MB</span>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="ph-check-box">
-                          <input type="checkbox" id="ph-agreement" name="ph-agreement" value="Agreement" />
-                          <label for="ph-agreement">Please send me a Non Disclosure Agreement</label>
-                          <span class="ph-check-small-text">Your idea is 100% protected by our non disclosure agreement. </span>
-                        </div>
-                      </div>
-                      <div class="col-md-12 mt-5 text-center d-block">
-                        <a href="javascript:;" class="ph-btn ph-contact-btn">Contact Now</a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>

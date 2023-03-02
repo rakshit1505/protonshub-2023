@@ -15,7 +15,7 @@
 
 }
 
-option{
+option {
     color: black;
 }
 
@@ -74,9 +74,17 @@ select {
     font-family: var(--ph-font-family);
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    box-shadow: none !important;
+    border-color: var(--ph-lightgray-color) !important;
+}
+
 .ph-protons-form .form-select {
     border: 1px solid var(--ph-filed-color);
-    color: var(--ph-lightgray-color);
+    color: #6b7785;
+    font-size: 14px;
 }
 
 .ph-protons-form .form-select:focus {
@@ -198,6 +206,10 @@ section {
     box-shadow: inset 0 0 0 2em var(--ph-black-color);
 }
 
+.inline-error {
+    font-size: 14px;
+}
+
 /* end */
 
 // /* preloder start */
@@ -229,8 +241,8 @@ section {
 /* scroll bottom to top start*/
 .progress-wrap {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 90px;
+    right: 32px;
     height: 44px;
     width: 44px;
     cursor: pointer;
@@ -398,6 +410,7 @@ section {
 
 .ph-banner-btn {
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .ph-banner-btn .ph-btn {
@@ -547,10 +560,6 @@ section {
     font-size: 20px;
     font-weight: 500;
     transition: all 0.3s;
-}
-
-.ph-our-service .ph-tab-nav a:hover {
-    color: var(--ph-main-color);
 }
 
 .ph-our-service-content ul {
@@ -1818,6 +1827,10 @@ section {
     padding: 40px;
 }
 
+.ph-check-box .form-check {
+    display: flex;
+}
+
 .ph-contact-bg {
     background: url(contact-us-bg.jpg) no-repeat center center;
     position: relative;
@@ -1919,7 +1932,7 @@ section {
 }
 
 .ph-contact-msg {
-    margin: 15px 0 12px;
+    margin: 15px 0 0;
 }
 
 .ph-contact-details ul {
@@ -1972,43 +1985,43 @@ label.ph-file-upload:hover {
     padding-left: 5px;
 }
 
-.ph-check-box input[type=checkbox]+label {
-    display: block;
-    cursor: pointer;
-    color: var(--ph-black-color);
-}
+// .ph-check-box input[type=checkbox]+label {
+//     display: block;
+//     cursor: pointer;
+//     color: var(--ph-black-color);
+// }
 
-.ph-check-box input[type=checkbox] {
-    display: none;
-}
+// .ph-check-box input[type=checkbox] {
+//     display: none;
+// }
 
-.ph-check-box input[type=checkbox]+label:before {
-    content: "\2714";
-    border: 1px solid var(--ph-filed-color);
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 18px;
-    margin-right: 10px;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .3s;
-    padding-left: 3px;
-    position: absolute;
-    left: 0;
-    margin-top: 3px;
-}
+// .ph-check-box input[type=checkbox]+label:before {
+//     content: "\2714";
+//     border: 1px solid var(--ph-filed-color);
+//     border-radius: 0.2em;
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     line-height: 18px;
+//     margin-right: 10px;
+//     vertical-align: bottom;
+//     color: transparent;
+//     transition: .3s;
+//     padding-left: 3px;
+//     position: absolute;
+//     left: 0;
+//     margin-top: 3px;
+// }
 
-.ph-check-box input[type=checkbox]+label:active:before {
-    transform: scale(0);
-}
+// .ph-check-box input[type=checkbox]+label:active:before {
+//     transform: scale(0);
+// }
 
-.ph-check-box input[type=checkbox]:checked+label:before {
-    background-color: var(--ph-main-color);
-    border-color: var(--ph-main-color);
-    color: var(--ph-white-color);
-}
+// .ph-check-box input[type=checkbox]:checked+label:before {
+//     background-color: var(--ph-main-color);
+//     border-color: var(--ph-main-color);
+//     color: var(--ph-white-color);
+// }
 
 .ph-check-small-text {
     font-size: 12px;
@@ -2017,7 +2030,26 @@ label.ph-file-upload:hover {
 
 .ph-check-box {
     position: relative;
-    padding-left: 30px;
+}
+
+.ph-check-box .form-check-input:focus {
+    box-shadow: none;
+    border-color: var(--ph-main-color);
+}
+
+.ph-check-box .form-check-input {
+    margin-right: 15px;
+    height: 1.3rem;
+    padding: 0px 10px;
+}
+
+.ph-check-box .form-check-input:checked {
+    background: var(--ph-main-color);
+    border-color: transparent;
+}
+
+.ph-check-box .form-check-input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 
 .ph-contact-btn {
@@ -2195,6 +2227,7 @@ label.ph-file-upload:hover {
     white-space: nowrap;
     overflow: hidden;
 }
+
 .ph-blog-box p {
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
@@ -2203,6 +2236,7 @@ label.ph-file-upload:hover {
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .ph-blog-img img {
     width: 100%;
 }
@@ -2357,7 +2391,6 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-OurTeam-content .ph-heading-title {
     position: relative;
     text-align: left;
-    margin-bottom: 0;
 }
 
 .ph-OurTeam-content .ph-heading-title h1 {
@@ -2638,6 +2671,8 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-email-details p span {
     font-weight: 500;
     color: var(--ph-main-color);
+    position: relative;
+    z-index: 9;
 }
 
 .ph-email-details p:last-child {
@@ -2652,7 +2687,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     max-width: 70px;
 }
 
-.ph-career-360 .ph-career-circle{
+.ph-career-360 .ph-career-circle {
     background: var(--ph-darkgray-color);
     width: 100%;
     max-width: 250px;
@@ -2666,13 +2701,15 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     color: var(--ph-white-color);
     transition: all 0.3s;
 }
+
 .ph-career-360 .ph-career-circle h6 {
     padding: 58px 38px;
     font-size: 22px;
     font-weight: 400;
 
 }
-.ph-career-360 .ph-career-circle1{
+
+.ph-career-360 .ph-career-circle1 {
     background: var(--ph-darkgray-color);
     width: 100%;
     max-width: 250px;
@@ -2687,6 +2724,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     transition: all 0.5s;
     transition: all 0.3s;
 }
+
 .ph-career-360 .ph-career-circle1 h6 {
     padding: 60px 0 0 115px;
     font-size: 22px;
@@ -2694,7 +2732,8 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     text-align: center;
     position: relative;
 }
-.ph-career-360 .ph-career-circle2{
+
+.ph-career-360 .ph-career-circle2 {
     background: var(--ph-darkgray-color);
     width: 100%;
     max-width: 250px;
@@ -2708,6 +2747,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     color: var(--ph-white-color);
     transition: all 0.3s;
 }
+
 .ph-career-360 .ph-career-circle2 h6 {
     padding: 58px 38px;
     font-size: 22px;
@@ -2716,24 +2756,30 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     position: relative;
     top: 100px;
 }
+
 .ph-career-360:hover {
     box-shadow: 0px 6px 16px 0px #0c05351f;
     transform: scale(1.01);
     border-color: var(--ph-filed-color);
 }
-.ph-career-360:hover .ph-career-circle{
+
+.ph-career-360:hover .ph-career-circle {
     background: var(--ph-black-color);
 }
-.ph-career-360:hover .ph-career-circle1{
+
+.ph-career-360:hover .ph-career-circle1 {
     background: var(--ph-black-color);
 }
-.ph-career-360:hover .ph-career-circle2{
+
+.ph-career-360:hover .ph-career-circle2 {
     background: var(--ph-black-color);
 }
-.ph-career-360:hover .ph-career-circle3{
+
+.ph-career-360:hover .ph-career-circle3 {
     background: var(--ph-black-color);
 }
-.ph-career-360 .ph-career-circle3{
+
+.ph-career-360 .ph-career-circle3 {
     background: var(--ph-darkgray-color);
     width: 100%;
     max-width: 250px;
@@ -2747,7 +2793,8 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     color: var(--ph-white-color);
     transition: all 0.3s;
 }
-.ph-career-360 .ph-career-circle3 h6{
+
+.ph-career-360 .ph-career-circle3 h6 {
     padding: 60px 0 0 105px;
     font-size: 22px;
     font-weight: 400;
@@ -2775,6 +2822,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-career-360.ph-careerpad-left {
     padding-left: 130px;
 }
+
 .ph-career-360 h5 {
     font-size: 22px;
     text-transform: uppercase;
@@ -2799,6 +2847,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     background: var(--ph-darkgray-color);
     border-radius: 50px;
 }
+
 .ph-hire-career {
     padding: 15px 24px 20px;
 }
@@ -2825,6 +2874,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-hire-career .ph-job-describe ul {
     margin-bottom: 15px;
 }
+
 .ph-modal-heading.ph-details-describe h6 {
     margin-bottom: 0;
 }
@@ -3476,6 +3526,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     box-shadow: 0 0 10px 0 #0e153f21;
     padding: 12px;
     border-radius: 4px;
+    margin-right: 5px;
 }
 
 .ph-all-answers ul {
@@ -3492,10 +3543,13 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     border-radius: 15px;
     position: relative;
     transition: all 0.3s;
+    margin-bottom: 20px;
 }
-.ph-all-answers ul li:hover{
+
+.ph-all-answers ul li:hover {
     transform: translateY(-5px);
 }
+
 .ph-all-answers ul li h6 {
     margin-bottom: 0;
 }
@@ -3872,7 +3926,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     position: relative;
 }
 
-.ph-agritech-bg{
+.ph-agritech-bg {
     background: url(agritech-banner.webp) no-repeat center center;
     background-size: cover;
 }
@@ -4231,13 +4285,14 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 
 .ph-blog-sidebar .ph-search-bar input {
     border: 0;
-/*    border-radius: 50px;*/
+    /*    border-radius: 50px;*/
 }
+
 .ph-newslatter-blogs .form-control {
     background: transparent;
 }
 
-.ph-newslatter-blogs{
+.ph-newslatter-blogs {
     display: block;
 }
 
@@ -4246,8 +4301,16 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     border: 0;
     border-radius: 0;
 }
+
 .ph-attach-file {
     height: auto;
+    margin-top: 15px;
+}
+.Ph-form-sec .ph-attach-file {
+    margin-top: 0;
+}
+.Ph-form-sec .ph-contact-msg {
+    margin-bottom: 15px;
 }
 
 .ph-newslatter-blogs .input-group-text button {
@@ -4540,11 +4603,11 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     }
 
     50% {
-        transform: scale(1.1, 1.2);
+        transform: scale(1.1, 1.1);
         -webkit-transform: scale(1.1, 1.1);
-        -moz-transform: scale(1.1, 1.2);
-        -ms-transform: scale(1.1, 1.2);
-        -o-transform: scale(1.1, 1.2);
+        -moz-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -o-transform: scale(1.1, 1.1);
     }
 
     100% {
@@ -4829,14 +4892,17 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     padding-bottom: 150px;
     background-size: 100%;
 }
-.ph-agritech-bottom{
+
+.ph-agritech-bottom {
     background: url(agritech-paralex.webp) no-repeat bottom center;
     padding-bottom: 150px;
-    background-size: 100%;  
+    background-size: 100%;
 }
-.ph-agritech-sec{
+
+.ph-agritech-sec {
     background: url(agritech-bh-text) no-repeat right center;
 }
+
 .ph-logistics-bottom {
     background: url(logistics-banner-bottom.webp) no-repeat bottom center;
     background-size: 100%;
@@ -5073,7 +5139,6 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 /* portfolio start */
 .ph-portfolio-box {
     margin: 12px 0;
-    padding: 15px;
     border-radius: 8px;
 }
 
@@ -5256,7 +5321,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 }
 
 .ph-iso-img img {
-    margin: 0 10px;
+    margin: 5px;
     max-width: 160px;
 }
 
@@ -5435,9 +5500,11 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 section.ph-thankyou-sec {
     padding: 140px 0 120px;
 }
+
 section.ph-notfound-sec {
     padding: 140px 0 80px;
 }
+
 section.ph-internalservererror-sec {
     padding: 150px 0;
 }
@@ -5541,21 +5608,26 @@ section.ph-internalservererror-sec {
     color: var(--ph-filed-color);
     margin-bottom: 0;
 }
+
 .ph-contact-footer i {
     font-size: 18px;
     vertical-align: middle;
     color: var(--ph-main-color);
 }
+
 .ph-footer-content .ph-content-f {
     display: flex;
     align-items: center;
 }
+
 .ph-footer-content .ph-content-f {
     color: var(--ph-white-color);
 }
+
 .ph-footer-content .ph-content-f p:first-child {
-    margin-right:20px;
+    margin-right: 20px;
 }
+
 .ph-copy-right p {
     text-align: left;
 }
@@ -5571,14 +5643,16 @@ section.ph-internalservererror-sec {
     font-size: 20px;
     transition: all 0.3s;
 }
-.ph-copy-right .ph-social-icons li a:hover{
+
+.ph-copy-right .ph-social-icons li a:hover {
     color: var(--ph-main-color);
 }
 
 .ph-copy-right .ph-social-icons li {
     margin-left: 28px;
 }
-.ph-copy-right .ph-social-icons li:first-child{
+
+.ph-copy-right .ph-social-icons li:first-child {
     margin-left: 0;
 }
 
@@ -5586,7 +5660,7 @@ section.ph-internalservererror-sec {
 
 /* modal start */
 .ph-hire-form {
-    padding: 30px 40px;
+    padding: 25px 30px;
 }
 
 .ph-hire-form input,
@@ -6175,6 +6249,9 @@ section.ph-internalservererror-sec {
         top: -77px;
         right: -88px;
     }
+    .ph-plan-box{
+        padding: 15px 10px;  
+    }
 }
 
 @media screen and (max-width: 991.5px) {
@@ -6197,9 +6274,9 @@ section.ph-internalservererror-sec {
     }
 
     .ph-our-service .ph-ourService-content {
-        padding: 15px;
+        padding: 25px 15px;
     }
-
+    
     .ph-process-in {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0 50px;
@@ -6247,6 +6324,22 @@ section.ph-internalservererror-sec {
     .technologies-sec {
         display: none;
     }
+    .ph-process-sec {
+        padding-top: 20px;
+    }
+    .ph-prices-box {
+     padding: 12px;
+    }
+    .ph-corevalue-box{
+        padding: 10px;
+    }
+    .ph-Industries-box p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .ph-health-bg{
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 767.5px) {
@@ -6281,13 +6374,16 @@ section.ph-internalservererror-sec {
     }
 
     .ph-our-service .ph-tab-nav a {
-        padding: 0;
+        padding: 10px 12px;
         font-size: 14px;
         margin-right: 5px;
+        background: var(--ph-lightbgcolor);
     }
+
     .ph-our-service .ph-tab-nav a:last-child {
         margin-right: 0;
     }
+
     .ph-tab-nav {
         margin-bottom: 10px;
     }
@@ -6299,7 +6395,9 @@ section.ph-internalservererror-sec {
 
     .ph-our-service .ph-tab-nav .nav-pills .nav-link.active,
     .ph-our-service .nav-pills .show>.nav-link {
-        padding: 0;
+        background: var(--ph-main-color);
+        padding: 10px 12px;
+        color: var(--ph-white-color);
     }
 
     .ph-why-choose-grid ul {
@@ -6318,11 +6416,6 @@ section.ph-internalservererror-sec {
     .ph-contact-form ul {
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .ph-heading-title {
-        margin-bottom: 5px;
-    }
-
     .ph-heading-title h1 {
         font-size: 24px;
     }
@@ -6537,6 +6630,30 @@ section.ph-internalservererror-sec {
         grid-template-columns: repeat(3, 1fr);
         margin-top: 30px;
     }
+    .ph-allcontact-form {
+        grid-gap: 15px 15px;
+    }
+    .ph-contact-form {
+        padding: 24px 0;
+    }
+    .ph-check-box .form-check {
+        margin-top: 15px;
+    }
+    .ph-accordion-box .accordion-flush .accordion-item .accordion-button, .ph-accordion-box .accordion-flush .accordion-item .accordion-button.collapsed{
+        font-size:15px;    
+    }
+    .ph-iso-img {
+        text-align: left;
+    }
+    .ph-hireprice-box ul{
+        margin-top: 0;
+    }
+    .ph-fintech-point{
+        padding: 12px;
+    }
+    .ph-wirframe-box {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 575px) and (max-width: 991.5px) {
@@ -6551,6 +6668,15 @@ section.ph-internalservererror-sec {
 
     .ph-team-block .ph-info-box .ph-designation {
         font-size: 12px;
+    }
+    .ph-great-place{
+        opacity: 0.2;
+    }
+    .ph-process-in {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ph-dedicated-process {
+        margin-top: 15px;
     }
 
 }
@@ -6603,11 +6729,11 @@ section.ph-internalservererror-sec {
     }
 
     .ph-contact-form {
-        padding: 15px;
+        padding: 12 px 0;
     }
 
     .ph-years-img {
-        text-align: center;
+        margin-bottom: 15px;
     }
 
     .ph-about-alllogo {
@@ -6643,22 +6769,96 @@ section.ph-internalservererror-sec {
     .ph-close-btn {
         font-size: 10px;
     }
-    .ph-process-btn .ph-btn{
+
+    .ph-process-btn .ph-btn {
         margin-top: 10px;
     }
-    .ph-copy-right p{
+
+    .ph-copy-right p {
         text-align: center;
     }
-    .ph-copy-right{
+
+    .ph-copy-right {
         text-align: center;
     }
-    .ph-copy-right .ph-social-icons{
+
+    .ph-copy-right .ph-social-icons {
         justify-content: center;
     }
-    .ph-copy-right p{
+
+    .ph-copy-right p {
         margin-bottom: 10px;
     }
+
     .ph-copy-right .ph-social-icons li {
         margin-left: 18px;
+    }
+
+    .ph-allcontact-form li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .ph-allcontact-form li:last-child {
+        margin-bottom: 20px;
+    }
+
+    .ph-social-icon ul li {
+        border: 0;
+    }
+    .ph-hireprice-box ul {
+        margin-top: 5px;
+    }
+    .ph-our-service .ph-tab-nav .ph-row-tab {
+        flex-direction:column !important;
+        gap: 10px;
+    }
+    .ph-great-p {
+        margin-top: 15px;
+    }
+    .ph-ourTeam-banner{
+        padding: 120px 0 50px;
+    }
+    .ph-casestudy-sec {
+        padding: 120px 0 40px;
+    }
+    .ph-foodNav-tab .nav-pills li button {
+        width: 100%;
+        margin-bottom: 13px;
+        text-align: left;
+    }
+    .ph-case-shadow{
+        padding: 15px;
+   }
+   .ph-health-img{
+        text-align: center;
+   }
+}
+
+@media screen and ( max-width: 480px ){
+    .ph-email-details{
+        margin-bottom: 15px;
+    }
+    .ph-iso-img {
+        display: flex;
+    }
+    .ph-heading-title {
+        margin-bottom: 15px;
+    }
+    .ph-wireframe-inner {
+        text-align: center;
+    }
+    .ph-dedicated-content {
+        padding: 12px;
+    }
+    .ph-dedicated-content h1{
+        position: relative;
+        z-index: 9;
+    }
+    .ph-foodNav-tab .nav-pills li{
+        width: 100%;
+    }
+    .ph-scroll-content .ph-corevalue-box:last-child {
+        margin-bottom: 0;
     }
 }
