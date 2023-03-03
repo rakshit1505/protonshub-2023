@@ -2221,7 +2221,18 @@ label.ph-file-upload:hover {
     margin: 0px 5px 30px;
     border-radius: 4px;
 }
-
+.ph-blog-details .ph-hireprice-box{
+    margin-bottom: 25px;
+}
+.ph-hireprice-box ul {
+    margin-top: 0px;
+}
+.ph-blog-details h6 {
+    font-size: 20px;
+}
+.ph-blog-details img{
+    margin: 15px 0 30px;
+}
 .ph-blog-title {
     font-size: 21px;
     display: block;
@@ -3994,9 +4005,6 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     margin-top: 60px;
 }
 
-.ph-hireprice-box ul {
-    margin-top: 20px;
-}
 
 .ph-hireprice-box ul li {
     position: relative;
