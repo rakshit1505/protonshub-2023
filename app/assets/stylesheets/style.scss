@@ -81,6 +81,11 @@ select:focus {
     border-color: var(--ph-lightgray-color) !important;
 }
 
+input[type="file"] {
+    padding: 0;
+    border: 0;
+}
+
 .ph-protons-form .form-select {
     border: 1px solid var(--ph-filed-color);
     color: #6b7785;
@@ -6634,7 +6639,7 @@ section.ph-internalservererror-sec {
         grid-gap: 15px 15px;
     }
     .ph-contact-form {
-        padding: 24px 0;
+        padding: 24px 15px;
     }
     .ph-check-box .form-check {
         margin-top: 15px;
@@ -6729,7 +6734,7 @@ section.ph-internalservererror-sec {
     }
 
     .ph-contact-form {
-        padding: 12 px 0;
+        padding: 12px;
     }
 
     .ph-years-img {
@@ -6832,6 +6837,9 @@ section.ph-internalservererror-sec {
    }
    .ph-health-img{
         text-align: center;
+   }
+   .ph-expertise-box{
+    padding: 12px;
    }
 }
 
