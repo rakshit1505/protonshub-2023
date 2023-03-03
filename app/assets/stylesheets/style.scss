@@ -12,8 +12,8 @@
 
 * {
     scroll-behavior: smooth;
-
 }
+
 
 option {
     color: black;
@@ -4311,9 +4311,11 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     height: auto;
     margin-top: 15px;
 }
+
 .Ph-form-sec .ph-attach-file {
     margin-top: 0;
 }
+
 .Ph-form-sec .ph-contact-msg {
     margin-bottom: 15px;
 }
@@ -5502,18 +5504,20 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 }
 
 /* business partner end*/
-section.ph-thankyou-sec {
+.ph-thankyou-sec {
     padding: 140px 0 120px;
 }
 
-section.ph-notfound-sec {
+.ph-notfound-sec {
     padding: 140px 0 80px;
 }
 
-section.ph-internalservererror-sec {
+.ph-internalservererror-sec {
     padding: 150px 0;
 }
-
+ul.ph-dreamProject-box {
+    padding-left: 0;
+}
 /* Custom style End*/
 
 /*footer sec start*/
@@ -5830,6 +5834,7 @@ section.ph-internalservererror-sec {
 }
 
 @media (max-width: 1199px) {
+
     .ph-main-menu {
         position: fixed;
         top: 0;
@@ -6254,8 +6259,12 @@ section.ph-internalservererror-sec {
         top: -77px;
         right: -88px;
     }
-    .ph-plan-box{
-        padding: 15px 10px;  
+
+    .ph-plan-box {
+        padding: 15px 10px;
+    }
+    .ph-plan-box .ph-dreamProject-box li {
+        padding-left: 0;
     }
 }
 
@@ -6281,7 +6290,7 @@ section.ph-internalservererror-sec {
     .ph-our-service .ph-ourService-content {
         padding: 25px 15px;
     }
-    
+
     .ph-process-in {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0 50px;
@@ -6329,20 +6338,25 @@ section.ph-internalservererror-sec {
     .technologies-sec {
         display: none;
     }
+
     .ph-process-sec {
         padding-top: 20px;
     }
+
     .ph-prices-box {
-     padding: 12px;
+        padding: 12px;
     }
-    .ph-corevalue-box{
+
+    .ph-corevalue-box {
         padding: 10px;
     }
+
     .ph-Industries-box p {
         font-size: 13px;
         line-height: 18px;
     }
-    .ph-health-bg{
+
+    .ph-health-bg {
         padding: 20px;
     }
 }
@@ -6421,6 +6435,7 @@ section.ph-internalservererror-sec {
     .ph-contact-form ul {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .ph-heading-title h1 {
         font-size: 24px;
     }
@@ -6635,29 +6650,49 @@ section.ph-internalservererror-sec {
         grid-template-columns: repeat(3, 1fr);
         margin-top: 30px;
     }
+
     .ph-allcontact-form {
         grid-gap: 15px 15px;
     }
+
     .ph-contact-form {
         padding: 24px 15px;
     }
+
     .ph-check-box .form-check {
         margin-top: 15px;
     }
-    .ph-accordion-box .accordion-flush .accordion-item .accordion-button, .ph-accordion-box .accordion-flush .accordion-item .accordion-button.collapsed{
-        font-size:15px;    
+
+    .ph-accordion-box .accordion-flush .accordion-item .accordion-button,
+    .ph-accordion-box .accordion-flush .accordion-item .accordion-button.collapsed {
+        font-size: 15px;
     }
+
     .ph-iso-img {
         text-align: left;
     }
-    .ph-hireprice-box ul{
+
+    .ph-hireprice-box ul {
         margin-top: 0;
     }
-    .ph-fintech-point{
+
+    .ph-fintech-point {
         padding: 12px;
     }
+
     .ph-wirframe-box {
         text-align: center;
+    }
+
+    .ph-plan-content h2 {
+        position: relative;
+        z-index: 9;
+    }
+    .ph-expertise-box{
+        padding: 10px;
+    }
+    .ph-rectjs-sec {
+        padding: 120px 0 50px;
     }
 }
 
@@ -6674,12 +6709,15 @@ section.ph-internalservererror-sec {
     .ph-team-block .ph-info-box .ph-designation {
         font-size: 12px;
     }
-    .ph-great-place{
+
+    .ph-great-place {
         opacity: 0.2;
     }
+
     .ph-process-in {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .ph-dedicated-process {
         margin-top: 15px;
     }
@@ -6811,61 +6849,78 @@ section.ph-internalservererror-sec {
     .ph-social-icon ul li {
         border: 0;
     }
+
     .ph-hireprice-box ul {
         margin-top: 5px;
     }
+
     .ph-our-service .ph-tab-nav .ph-row-tab {
-        flex-direction:column !important;
+        flex-direction: column !important;
         gap: 10px;
     }
+
     .ph-great-p {
         margin-top: 15px;
     }
-    .ph-ourTeam-banner{
+
+    .ph-ourTeam-banner {
         padding: 120px 0 50px;
     }
+
     .ph-casestudy-sec {
         padding: 120px 0 40px;
     }
+
     .ph-foodNav-tab .nav-pills li button {
         width: 100%;
         margin-bottom: 13px;
         text-align: left;
     }
-    .ph-case-shadow{
+
+    .ph-case-shadow {
         padding: 15px;
-   }
-   .ph-health-img{
+    }
+
+    .ph-health-img {
         text-align: center;
-   }
-   .ph-expertise-box{
-    padding: 12px;
-   }
+    }
+
+    .ph-expertise-box {
+        padding: 12px;
+    }
+
 }
 
-@media screen and ( max-width: 480px ){
-    .ph-email-details{
+@media screen and (max-width: 480px) {
+    .ph-email-details {
         margin-bottom: 15px;
     }
+
     .ph-iso-img {
         display: flex;
     }
+
     .ph-heading-title {
         margin-bottom: 15px;
     }
+
     .ph-wireframe-inner {
         text-align: center;
     }
+
     .ph-dedicated-content {
         padding: 12px;
     }
-    .ph-dedicated-content h1{
+
+    .ph-dedicated-content h1 {
         position: relative;
         z-index: 9;
     }
-    .ph-foodNav-tab .nav-pills li{
+
+    .ph-foodNav-tab .nav-pills li {
         width: 100%;
     }
+
     .ph-scroll-content .ph-corevalue-box:last-child {
         margin-bottom: 0;
     }
