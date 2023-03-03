@@ -277,6 +277,7 @@
     $('.remove-errors').on('click', function(){
        $('.inline-error').html('')
     })
+    
   })
   
 

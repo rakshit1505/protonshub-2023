@@ -29,6 +29,8 @@ option {
 
 .ph-bg-color {
     background: var(--ph-lightbgcolor);
+    position: relative;
+    z-index: 0;
 }
 
 a {
@@ -86,7 +88,12 @@ input[type="file"] {
     border: 0;
     border-radius: 0;
 }
-
+select::placeholder{
+    color: var(--ph-lightgray-color)
+}
+.ph-video-inner{
+    padding: 12px 12px 0;
+}
 .ph-protons-form .form-select {
     border: 1px solid var(--ph-filed-color);
     color: #6b7785;
@@ -381,7 +388,7 @@ section {
     content: '';
     position: absolute;
     background: var(--ph-black-color);
-    background: radial-gradient(circle, RGB(0 0 0 / 67%) 0%, RGB(0 2 5) 100%);
+    background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5) 145%);
     top: 0;
     bottom: 0;
     left: 0;
@@ -1790,6 +1797,7 @@ section {
     transition: all 0.5s;
     border: 1px solid transparent;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .ph-why-choose-grid ul li:hover {
@@ -2187,7 +2195,7 @@ label.ph-file-upload:hover {
     text-align: center;
     border-radius: 50%;
     background: #fff;
-    font-size: 21px;
+    font-size: 18px;
     color: #020202b3;
     border: 2px solid #f2f2f2;
 }
@@ -5753,7 +5761,7 @@ ul.ph-dreamProject-box {
         display: inline-block;
         padding: 26px 0;
         text-transform: capitalize;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
     }
 

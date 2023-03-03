@@ -1125,7 +1125,7 @@
   <!-- Technologies Sec end -->
 
   <!-- Get quete form -->
-  <section class="ph-get-qoute-sec">
+  <section class="ph-get-qoute-sec ph-bg-color">
     <div class="container">
       <div class="col-xxl-10 col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto ph-get-qoute-s">
         <div class="row">
@@ -1154,31 +1154,31 @@
                   <ul>
                     <li>
                       <%= f.text_field_without_bootstrap :full_name, placeholder: 'Full Name', hide_label: true %>
-                      <span class="inline-error project-error-full_name" style=""></span>
+                      <span class="inline-error project-error-full_name" ></span>
                     </li>
                     <li>
                       <%= f.email_field_without_bootstrap :email, placeholder: 'Email', hide_label: true %>
-                      <span class="inline-error project-error-email" style=""></span>
+                      <span class="inline-error project-error-email" ></span>
                     </li>
                     <li>
                       <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Contact Number', hide_label: true %>
-                      <span class="inline-error project-error-contact_number" style=""></span>
+                      <span class="inline-error project-error-contact_number" ></span>
                     </li>
                     <li>
                       <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
-                      <span class="inline-error project-error-service" style=""></span>
+                      <span class="inline-error project-error-service" ></span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="ph-contact-msg">
                   <%= f.text_area_without_bootstrap :description, placeholder: 'Project Description', hide_label: true %>
-                  <span class="inline-error project-error-description" style=""></span>
+                  <span class="inline-error project-error-description" ></span>
                 </div>
 
                 <div class="col-md-12">
                   <%= f.file_field_without_bootstrap :file, class: 'ph-attach-file', hide_label: true %>
-                  <span class="inline-error project-error-file" style=""></span>
+                  <span class="inline-error project-error-file" ></span>
                 </div>
                 <div class="col-md-12 mt-4 text-center d-block">
                   <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
