@@ -2868,8 +2868,8 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 
 .ph-career-360 ul li {
     position: relative;
-    padding-left: 14px;
-    line-height: 30px;
+    padding-left: 15px;
+    padding-bottom: 10px;
     font-size: 15px;
     color: var(--ph-darkgray-color);
 }
@@ -2877,7 +2877,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 .ph-career-360 ul li:before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 0;
     width: 4px;
     height: 4px;
@@ -5767,6 +5767,7 @@ ul.ph-dreamProject-box {
     .ph-infrastructure-content {
         padding: 30px;
     }
+ 
 }
 
 @media (min-width: 1200px) {
@@ -5776,6 +5777,9 @@ ul.ph-dreamProject-box {
         position: relative;
     }
 
+    .ph-main-header{
+        padding: 0 50px;
+    }
     .ph-main-menu>ul>li:last-child {
         margin-right: 0;
     }
@@ -6737,6 +6741,10 @@ ul.ph-dreamProject-box {
     .ph-rectjs-sec {
         padding: 120px 0 50px;
     }
+    .ph-otherwork-img img {
+        padding-top: 40px;
+    }
+  
 }
 
 @media screen and (min-width: 575px) and (max-width: 991.5px) {
@@ -6932,6 +6940,26 @@ ul.ph-dreamProject-box {
         padding: 12px;
     }
 
+    .ph-blog-sidebar {
+        margin-top: 15px;
+    }
+
+    .ph-count-digital ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ph-otherWork-sec {
+        padding-bottom: 50px;
+    }
+
+    .ph-otherwork-img img {
+        padding-top: 40px;
+    }
+    .ph-workProcess .ph-multi-box li{
+        padding: 12px 8px;
+    }
+    .ph-business-img{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -6967,4 +6995,17 @@ ul.ph-dreamProject-box {
     .ph-scroll-content .ph-corevalue-box:last-child {
         margin-bottom: 0;
     }
+    .ph-otherinner-box {
+        padding: 12px 5px;
+    }
+    .ph-allcontact-form{
+        margin-bottom: 15px !important;
+    }
+    .ph-all-answers ul{
+        gap: 20px;
+    }
+    .ph-all-answers ul li h5{
+        font-size: 16px;
+    }
+
 }
