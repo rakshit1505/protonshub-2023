@@ -1804,7 +1804,6 @@ section {
     transition: all 0.5s;
     border: 1px solid transparent;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .ph-why-choose-grid ul li:hover {
@@ -1820,12 +1819,14 @@ section {
     text-transform: capitalize;
     margin: 0;
     font-weight: 400;
+    pointer-events: none;
 }
 
 .ph-why-choose-grid ul li h2 {
     font-size: 32px;
     display: inline-block;
     font-weight: 700;
+    pointer-events: none;
 }
 
 .ph-why-choose-grid ul li span {
@@ -1833,6 +1834,7 @@ section {
     font-size: 21px;
     margin-left: 2px;
     font-weight: 500;
+    pointer-events: none;
 }
 
 /* End counter sec */
@@ -1842,6 +1844,7 @@ section {
     background: var(--ph-white-color);
     position: relative;
     box-shadow: 0 0 16px 0 #070d2f0d;
+    border-radius: 10px;
 }
 
 .ph-contact-form {
@@ -1856,6 +1859,8 @@ section {
     background: url(contact-us-bg.jpg) no-repeat center center;
     position: relative;
     background-size: cover;
+    border-radius:10px 0 0px 10px;
+    
 }
 
 .ph-contact-bg:before {
@@ -1866,6 +1871,7 @@ section {
     right: 0;
     left: 0;
     background: RGB(12 8 1 / 84%);
+    border-radius: 10px 0 0px 10px;
 }
 
 .ph-contact-details {
@@ -2144,16 +2150,21 @@ label.ph-file-upload:hover {
 }
 
 .ph-testimonials.slider-thumbs .gallery-thumbs {
-    max-width: 260px;
-    margin: 50px auto 30px;
+    max-width: 400px;
+    margin: 50px auto 40px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+}
 
+.ph-testimonials .item p{
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .ph-testimonials.slider-thumbs .gallery-thumbs .img {
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
@@ -2168,8 +2179,8 @@ label.ph-file-upload:hover {
 }
 
 .ph-testimonials.slider-thumbs .gallery-thumbs .img .circle {
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     border: 3px solid transparent;
     border-radius: 50%;
     overflow: hidden;
@@ -2196,8 +2207,8 @@ label.ph-file-upload:hover {
 }
 
 .ph-testimonials.slider-thumbs .controls-rf .ctrl-circle {
-    width: 50px;
-    height: 50px;
+    width: 62px;
+    height: 62px;
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
@@ -2997,7 +3008,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     box-shadow: 0 0 16px 0 #2c165517;
     border-radius: 6px;
     padding: 5px;
-    background: #fff;
+    background: var(--ph-white-color);
 }
 
 .ph-appimg-inner {
@@ -3014,8 +3025,8 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 }
 
 .ph-app-inner-content h6 {
-    padding-top: 5px;
-    /* padding-bottom: 5px; */
+    padding-top: 10px;
+    margin-bottom: 5px;
 }
 
 .ph-inner-icon {
@@ -5543,7 +5554,10 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     background-size: cover;
     padding: 140px 0 80px;
 }
-
+.ph-product-sec{
+    background: url(banner-product-dev.jpg) no-repeat left center;
+    background-size: cover;
+}
 /* business partner end*/
 .ph-thankyou-sec {
     padding: 140px 0 120px;

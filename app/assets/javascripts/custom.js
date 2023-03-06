@@ -179,7 +179,7 @@
         centeredSlides: true,
         slidesPerView: 3,
         speed: 1000,
-        autoplay: true,
+        autoplay: false,
         touchRatio: 0.2,
         slideToClickedSlide: true,
         loop: true,
