@@ -3555,8 +3555,11 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     display: flex;
     flex-wrap: nowrap;
     grid-gap: 20px;
+    margin-bottom: 15px;
 }
-
+.ph-mission-inner span h6{
+    margin-bottom: 4px;
+}
 .ph-mission-inner span i {
     background: var(--ph-white-color);
     font-size: 20px;
@@ -5187,9 +5190,9 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     border-radius: 8px;
 }
 
-.ph-portfolio-box .ph-blog-text {
-    padding: 0;
-}
+// .ph-portfolio-box .ph-blog-text {
+//     padding: 0;
+// }
 
 .ph-types-app a {
     display: inline-block;
@@ -5754,6 +5757,11 @@ ul.ph-dreamProject-box {
 .ph-modal-blur .modal-content {
     border: 0;
     box-shadow: 0 0 30px 0 #03082773;
+}
+.ph-portfolio-box img {
+    width: 100%;
+    max-width: 99%;
+    text-align: center;
 }
 
 /* modal end */
@@ -6744,7 +6752,9 @@ ul.ph-dreamProject-box {
     .ph-otherwork-img img {
         padding-top: 40px;
     }
-  
+    .ph-business-img{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (min-width: 575px) and (max-width: 991.5px) {
@@ -6772,6 +6782,7 @@ ul.ph-dreamProject-box {
     .ph-dedicated-process {
         margin-top: 15px;
     }
+ 
 
 }
 
@@ -6957,9 +6968,7 @@ ul.ph-dreamProject-box {
     .ph-workProcess .ph-multi-box li{
         padding: 12px 8px;
     }
-    .ph-business-img{
-        margin-bottom: 10px;
-    }
+    
 }
 
 @media screen and (max-width: 480px) {

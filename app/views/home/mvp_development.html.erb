@@ -7,76 +7,72 @@
   <!-- Middle Content Start -->
 
 
-  <!-- Top Mobile App Development Banner start -->
+  <!-- Top mvp Banner start -->
   <section class="ph-app-develop-sec">
-    <div class="container">
+  <div class="container">
       <div class="ph-OurTeam-content">
-        <div class="row align-items-center">
-          <div class="col-md-6 col-sm-6">
-            <div class="ph-heading-title">
-              <h6 class="ph-banner-tiltle">World’s Top-Rated</h6>
-              <h1>Custom <span>MVP</span> Software Development Service</h1>
-              <p>Reduce your development time and <span>Launch</span> your MVP in <span>14
-              DAY’S</span> Materialize your Idea to testified version of Product</p>
-              <p>In the last 5 years Protonshub has helped 100’s of Businesses across the glove with
-              our Dedicated MVP Development Services</p>
-              <div class="ph-banner-btn mt-4">
-                <a href="javascript:;" class="ph-btn">Contact Now <i
-                  class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <div class="ph-heading-title">
+                      <h6 class="ph-banner-tiltle">World’s Top-Rated</h6>
+                      <h1>Custom <span>MVP</span> Software Development Service</h1>
+                      <p>Reduce your development time and <span>Launch</span> your MVP in <span>14
+                              DAY’S</span> Materialize your Idea to testified version of Product</p>
+                      <p>In the last 5 years Protonshub has helped 100’s of Businesses across the glove with
+                          our Dedicated MVP Development Services</p>
+                      <div class="ph-banner-btn mt-4">
+                          <a href="javascript:;" class="ph-btn">Consult Us <i class="fa-solid fa-arrow-right ms-2"></i>
+                          </a>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-5 col-sm-6 ms-auto">
-            <div class="ph-mvp-form">
-              <div class="ph-contact-field ph-hire-form">
-                <div class="ph-modal-heading">
-                  <h4>Connect for a free Consultation</h4>
-                  <p>Guaranteed Response within 12 business hours!</p>
-                </div>
-                <%= bootstrap_form_for Project.new, url: projects_path, html: {class: 'ph-protons-form'}, remote: true do |f| %>
-                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                  <div class="row">
-                    <ul>
-                      <li>
-                        <%= f.text_field_without_bootstrap :full_name, placeholder: 'Full Name', hide_label: true %>
-                        <span class="inline-error project-error-full_name" style=""></span>
-                      </li>
-                      <li>
-                        <%= f.email_field_without_bootstrap :email, placeholder: 'Email', hide_label: true %>
-                        <span class="inline-error project-error-email" style=""></span>
-                      </li>
-                      <li>
-                        <%= f.phone_field_without_bootstrap :contact_number, placeholder: 'Contact Number', hide_label: true %>
-                        <span class="inline-error project-error-contact_number" style=""></span>
-                      </li>
-                      <li>
-                        <%= f.collection_select :service_id, Service.activated, :id, :name, {include_blank: ("Select a Service"), hide_label: true, wrapper: {class: ''}} %>
-                        <span class="inline-error project-error-service" style=""></span>
-                      </li>
-                    </ul>
-                  </div>
+              <div class="col-md-5 ms-auto">
+                  <div class="ph-mvp-form">
+                      <div class="ph-contact-field ph-hire-form">
+                          <div class="ph-modal-heading">
+                              <h4>Connect for a free Consultation</h4>
+                              <p>Guaranteed Response within 12 business hours!</p>
+                          </div>
+                          <form method="post" class="ph-protons-form" action="">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <input type="text" name="name" placeholder="Full Name*" required="">
+                                  </div>
 
-                  <div class="ph-contact-msg">
-                    <%= f.text_area_without_bootstrap :description, placeholder: 'Project Description', hide_label: true %>
-                    <span class="inline-error project-error-description" style=""></span>
+                                  <div class="col-md-12">
+                                      <input type="email" name="email" placeholder="Email" required="">
+                                  </div>
+                                  <div class="col-md-12">
+                                      <input type="number" name="number" placeholder="Phone*" required="">
+                                  </div>
+                                  <div class="col-md-12">
+                                      <input type="text" name="cname" placeholder="Company Name*" required="">
+                                  </div>
+                                  <div class="col-md-12">
+                                      <select class="form-select" required="">
+                                          <option selected="">Select Technology*</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <div class="ph-contact-msg mt-0">
+                                          <textarea name="message" placeholder="Brief About The Project" required=""></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12 text-center d-block">
+                                      <a href="javascript:;" class="ph-btn ph-contact-btn">Submit</a>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
                   </div>
-
-                  <div class="col-md-12">
-                    <%= f.file_field_without_bootstrap :file, class: 'ph-attach-file', hide_label: true %>
-                    <span class="inline-error project-error-file" style=""></span>
-                  </div>
-                  <div class="col-md-12 mt-3 text-center d-block">
-                    <%= f.submit "Contact Now", class: "ph-btn ph-contact-btn" %>
-                  </div>
-                <% end %>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- experience start -->
   <section class="ph-experience-sec">
