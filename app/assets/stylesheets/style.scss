@@ -3783,7 +3783,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-weight: 500;
-    color: var(--ph-white-color);
+    color: var(--ph-black-color);
 }
 
 .ph-contact-camino h5:before {
@@ -3798,7 +3798,7 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
 }
 
 .ph-contact-camino p {
-    color: var(--ph-white-color);
+    color: var(--ph-black-color);
 }
 
 /* contact map end */
@@ -4273,6 +4273,115 @@ background: radial-gradient(circle, RGB(0 0 0 / 50%) 0%, RGB(0 2 5 / 85%) 100%);
     background: url(blog-top-banner.webp) no-repeat center center;
     background-size: cover;
 }
+
+/*All Blog Bnner Image*/
+
+
+/* Blog page start */
+.ph-blog-banner-10-inspiring{
+    background: url(10-inspiring-web-dev-trends.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-the-ultimate{
+     background: url(ultimate-guide-to-mob-app.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-hire-remote{
+    background: url(dedicated-devlopers.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-impact{
+    background: url(automation-in-edu.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-dedicated{
+/*     background: url(../images/dedicated-devlopers.webp) no-repeat center center;*/
+     background: url(blog-remote-developer2.webp) no-repeat center center;
+
+    background-size: cover;
+}
+.ph-blog-banner-5-powerfull{
+    background: url(trending-ui-ux.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-tools-develop {
+    background: url(tool-to-develop-react-apps.webp) no-repeat center left;
+    background-size: cover;
+}
+.ph-blog-banner-benefits{
+     background: url(agile-technology.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-outsourcing{
+    background: url(outsourcing.webp) no-repeat center center;
+    background-size: cover;
+}
+.ph-blog-banner-mvp{
+    background: url(mvp.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-business{
+    background: url(healthcare.webp) no-repeat center center;
+    background-size: cover;
+    
+}
+
+.ph-blog-banner-multi-telent{
+    background: url(multi-tenant.webp) no-repeat center center;
+    background-size: cover;
+    
+}
+
+.ph-blog-banner-microservice{
+     background: url(microservies.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-content-management{
+     background: url(content-management-system.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-global-staffing{
+     background: url(global-staffing-agency.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-react-mobile{
+     background: url(react-mobile-app.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-logistics{
+    background: url(logistics.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-food{
+    background: url(food-industry.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.ph-blog-banner-global-privacy{
+    background: url(privacy-policy.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.new_newsletter {
+    width: 100%;
+}
+
+.blog-linking {
+    color: var(--ph-main-color) !important;
+}
+
+/**/
+
+
+
+
 
 .ph-thumbnail-sec {
     padding: 40px 0 30px;
