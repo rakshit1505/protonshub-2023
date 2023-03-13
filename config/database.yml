@@ -92,7 +92,7 @@ development:
 production:
   host: localhost
   adapter: postgresql
-  database: protonshub_latest_production
+  database: protonshub_latest_production_2023
   username: alphauser
   password: alphapassword
   pool: 5
